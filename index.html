@@ -233,6 +233,37 @@
         .b-full    { background:rgba(217,249,223,.75); color:#377748; border:1px solid rgba(55,119,72,.18); }
         .b-first   { background:rgba(174,226,255,.7);  color:#2a6a96; border:1px solid rgba(42,106,150,.18); }
         .b-friendly{ background:rgba(181,186,255,.55); color:#5556c2; border:1px solid rgba(85,86,194,.18); }
+        .b-portal  { background:rgba(174,226,255,.55); color:#1a6a8a; border:1px solid rgba(26,106,138,.18); }
+
+        /* Portal card variant */
+        .card.portal { border-color:rgba(174,226,255,.2); }
+        .card.portal::before { background:linear-gradient(90deg,var(--sky),var(--mint)); }
+        .card.portal:hover { box-shadow:0 8px 36px rgba(174,226,255,.38); border-color:rgba(174,226,255,.42); }
+        .card.portal .card-link { background:rgba(174,226,255,.1); border-color:rgba(174,226,255,.2); }
+        .card.portal .card-link:hover { background:rgba(174,226,255,.2); border-color:var(--sky); }
+        .card.portal .li-ico { color:#1a6a8a; }
+        .card.portal .card-link-url { color:#1a6a8a; }
+        .card.portal .la { color:rgba(174,226,255,.7); }
+
+        /* Type tabs */
+        .type-tabs { display:flex; gap:6px; margin-bottom:18px; flex-wrap:wrap; }
+        .ttab {
+            padding:7px 16px; border-radius:100px;
+            border:1.5px solid rgba(159,161,255,.2);
+            background:rgba(255,255,255,.75);
+            font-family:'DM Sans',sans-serif; font-size:.81rem; font-weight:500;
+            color:var(--tm); cursor:pointer; transition:all .2s;
+            display:flex; align-items:center; gap:7px;
+        }
+        .ttab:hover { border-color:var(--p); color:var(--p); }
+        .ttab.active { background:var(--p); color:white; border-color:var(--p); box-shadow:0 3px 14px rgba(159,161,255,.35); }
+        .ttab.active.t-portal { background:linear-gradient(90deg,var(--sky),#8de8c8); border-color:var(--sky); color:#0f4a5c; box-shadow:0 3px 14px rgba(174,226,255,.4); }
+        .ttab-count {
+            background:rgba(255,255,255,.25); border-radius:100px;
+            padding:1px 7px; font-size:.72rem; font-weight:600;
+        }
+        .ttab:not(.active) .ttab-count { background:rgba(159,161,255,.1); color:var(--tl); }
+        .fsel.hidden { display:none; }
 
         /* LinkedIn source tag */
         .li-tag {
@@ -436,6 +467,20 @@
         <p>Your personal board of remote-friendly employers — built from LinkedIn posts & manual research, all in one place.</p>
     </div>
 
+    <div class="type-tabs" id="type-tabs">
+        <button class="ttab active" data-type="all">
+            All <span class="ttab-count" id="tc-all">—</span>
+        </button>
+        <button class="ttab" data-type="company">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+            Companies <span class="ttab-count" id="tc-company">—</span>
+        </button>
+        <button class="ttab t-portal" data-type="portal">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            Job Portals <span class="ttab-count" id="tc-portal">—</span>
+        </button>
+    </div>
+
     <div class="action-bar">
         <div class="search-wrap">
             <svg class="search-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -537,10 +582,13 @@ const COLORS    = [
 ];
 
 // ── State ──────────────────────────────────────────────────
-let repoData  = [];   // loaded from data.json
-let localData = [];   // loaded from localStorage
-let merged    = [];   // combined, deduped
-let editingId = null;
+let repoData   = [];
+let localData  = [];
+let merged     = [];
+let editingId  = null;
+let activeType = 'all'; // 'all' | 'company' | 'portal'
+
+function isPortal(c) { return c.industry === 'Job Platform'; }
 
 // ── Normalizers for dedup ──────────────────────────────────
 function nUrl(u) {
@@ -642,11 +690,16 @@ function renderCards(list) {
         return;
     }
 
-    label.textContent = list.length === merged.length
-        ? `All Companies — ${merged.length}`
+    const typeLabel = activeType === 'company' ? 'Companies' : activeType === 'portal' ? 'Job Portals' : 'All';
+    label.textContent = list.length === merged.length || (activeType !== 'all' && list.length === merged.filter(c => activeType === 'portal' ? isPortal(c) : !isPortal(c)).length)
+        ? `${typeLabel} — ${list.length}`
         : `${list.length} Result${list.length!==1?'s':''}`;
 
     grid.innerHTML = list.map((c, i) => {
+        const portal = isPortal(c);
+        const badgeHtml = portal
+            ? `<span class="remote-badge b-portal">Job Portal</span>`
+            : `<span class="remote-badge ${badgeClass(c.remoteType)}">${esc(c.remoteType)}</span>`;
         const liTag = c.linkedinPostUrl
             ? `<a href="${esc(c.linkedinPostUrl)}" target="_blank" rel="noopener" class="li-tag">
                    <svg width="10" height="10" viewBox="0 0 24 24" fill="#0a66c2"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
@@ -659,14 +712,14 @@ function renderCards(list) {
                </span>` : '';
 
         return `
-        <div class="card" style="animation-delay:${i*50}ms">
+        <div class="card${portal ? ' portal' : ''}" style="animation-delay:${i*50}ms">
             <div class="card-head">
                 <div class="c-logo" style="background:${logoGrad(c.name)}">${initials(c.name)}</div>
                 <div class="c-info">
                     <div class="c-name">${esc(c.name)}</div>
                     <div class="c-industry">${esc(c.industry||'—')}</div>
                 </div>
-                <span class="remote-badge ${badgeClass(c.remoteType)}">${esc(c.remoteType)}</span>
+                ${badgeHtml}
             </div>
             ${liTag}${localTag}
             <a href="${esc(c.url)}" target="_blank" rel="noopener noreferrer" class="card-link">
@@ -701,14 +754,31 @@ function renderCards(list) {
     }).join('');
 }
 
+function updateTabCounts() {
+    const total    = merged.length;
+    const portals  = merged.filter(isPortal).length;
+    const companies = total - portals;
+    document.getElementById('tc-all').textContent     = total;
+    document.getElementById('tc-company').textContent = companies;
+    document.getElementById('tc-portal').textContent  = portals;
+    // Hide remote-type filter on portal tab (portals don't have a hiring policy)
+    document.getElementById('ftype').classList.toggle('hidden', activeType === 'portal');
+}
+
 function filterRender() {
     const q  = document.getElementById('q').value.toLowerCase();
     const ft = document.getElementById('ftype').value;
     const fi = document.getElementById('find').value;
     let list = merged;
+
+    // Tab filter first
+    if (activeType === 'company') list = list.filter(c => !isPortal(c));
+    else if (activeType === 'portal') list = list.filter(isPortal);
+
     if (q)  list = list.filter(c=>(c.name+' '+(c.industry||'')+' '+(c.notes||'')).toLowerCase().includes(q));
-    if (ft) list = list.filter(c=>c.remoteType===ft);
+    if (ft && activeType !== 'portal') list = list.filter(c=>c.remoteType===ft);
     if (fi) list = list.filter(c=>c.industry===fi);
+    updateTabCounts();
     renderCards(list);
 }
 
@@ -855,6 +925,15 @@ document.getElementById('overlay').addEventListener('click', e=>{
     const el = document.getElementById(id);
     el.addEventListener('input', filterRender);
     el.addEventListener('change', filterRender);
+});
+
+document.querySelectorAll('.ttab').forEach(btn => {
+    btn.addEventListener('click', () => {
+        document.querySelectorAll('.ttab').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        activeType = btn.dataset.type;
+        filterRender();
+    });
 });
 
 // ── Toast ──────────────────────────────────────────────────
