@@ -101,6 +101,546 @@
       "notes": "Project management pioneers. Small team, wrote the book on remote work.",
       "dateAdded": "2024-03-14",
       "linkedinPostUrl": null
+    },
+    {
+      "id": "atlassian",
+      "name": "Atlassian",
+      "industry": "Technology",
+      "remoteType": "Fully Remote",
+      "url": "https://www.atlassian.com/company/careers",
+      "notes": "Makes Jira, Confluence, Trello. TEAM Anywhere policy — distributed-first culture.",
+      "dateAdded": "2025-06-08",
+      "linkedinPostUrl": "https://www.linkedin.com/posts/manali-kulkarni-4b44b017a_companies-hiring-for-100-remote-1-atlassian-share-7469274218577326081-WUPF/"
+    },
+    {
+      "id": "quest-software",
+      "name": "Quest Software",
+      "industry": "Technology",
+      "remoteType": "Fully Remote",
+      "url": "https://www.quest.com/company/careers.aspx",
+      "notes": "IT management and security solutions. Many fully remote engineering and sales roles.",
+      "dateAdded": "2025-06-08",
+      "linkedinPostUrl": "https://www.linkedin.com/posts/manali-kulkarni-4b44b017a_companies-hiring-for-100-remote-1-atlassian-share-7469274218577326081-WUPF/"
+    },
+    {
+      "id": "celigo",
+      "name": "Celigo",
+      "industry": "Technology",
+      "remoteType": "Fully Remote",
+      "url": "https://www.celigo.com/careers/",
+      "notes": "Integration platform (iPaaS). Hiring in US & India. Fully distributed team.",
+      "dateAdded": "2025-06-08",
+      "linkedinPostUrl": "https://www.linkedin.com/posts/manali-kulkarni-4b44b017a_companies-hiring-for-100-remote-1-atlassian-share-7469274218577326081-WUPF/"
+    },
+    {
+      "id": "cengage-group",
+      "name": "Cengage Group",
+      "industry": "Education",
+      "remoteType": "Fully Remote",
+      "url": "https://careers.cengage.com/",
+      "notes": "Educational content and technology. Strong remote policy across most functions.",
+      "dateAdded": "2025-06-08",
+      "linkedinPostUrl": "https://www.linkedin.com/posts/manali-kulkarni-4b44b017a_companies-hiring-for-100-remote-1-atlassian-share-7469274218577326081-WUPF/"
+    },
+    {
+      "id": "docker",
+      "name": "Docker, Inc",
+      "industry": "Technology",
+      "remoteType": "Fully Remote",
+      "url": "https://www.docker.com/career-openings/",
+      "notes": "Container platform. Fully distributed team — engineering, product, and GTM roles.",
+      "dateAdded": "2025-06-08",
+      "linkedinPostUrl": "https://www.linkedin.com/posts/manali-kulkarni-4b44b017a_companies-hiring-for-100-remote-1-atlassian-share-7469274218577326081-WUPF/"
+    },
+    {
+      "id": "hims-hers",
+      "name": "hims & hers",
+      "industry": "Healthcare",
+      "remoteType": "Fully Remote",
+      "url": "https://job-boards.greenhouse.io/himshers",
+      "notes": "Direct-to-consumer telehealth. Many remote roles in tech, marketing, and operations.",
+      "dateAdded": "2025-06-08",
+      "linkedinPostUrl": "https://www.linkedin.com/posts/manali-kulkarni-4b44b017a_companies-hiring-for-100-remote-1-atlassian-share-7469274218577326081-WUPF/"
+    },
+    {
+      "id": "usergems",
+      "name": "UserGems",
+      "industry": "Technology",
+      "remoteType": "Fully Remote",
+      "url": "https://www.usergems.com/jobs",
+      "notes": "AI-powered pipeline generation for B2B sales. Fully remote, async-first team.",
+      "dateAdded": "2025-06-08",
+      "linkedinPostUrl": "https://www.linkedin.com/posts/manali-kulkarni-4b44b017a_companies-hiring-for-100-remote-1-atlassian-share-7469274218577326081-WUPF/"
+    },
+    {
+      "id": "abnormal-security",
+      "name": "Abnormal Security",
+      "industry": "Technology",
+      "remoteType": "Fully Remote",
+      "url": "https://abnormal.ai/careers/open-roles",
+      "notes": "AI-native email security platform. Fast-growing cybersecurity company with remote roles.",
+      "dateAdded": "2025-06-08",
+      "linkedinPostUrl": "https://www.linkedin.com/posts/manali-kulkarni-4b44b017a_companies-hiring-for-100-remote-1-atlassian-share-7469274218577326081-WUPF/"
+    },
+    {
+      "id": "cash-app",
+      "name": "Cash App",
+      "industry": "Finance",
+      "remoteType": "Fully Remote",
+      "url": "https://cash.app/careers",
+      "notes": "Mobile payments by Block (formerly Square). Remote-forward with roles across engineering and design.",
+      "dateAdded": "2025-06-08",
+      "linkedinPostUrl": "https://www.linkedin.com/posts/manali-kulkarni-4b44b017a_companies-hiring-for-100-remote-1-atlassian-share-7469274218577326081-WUPF/"
+    },
+    {
+      "id": "logicgate",
+      "name": "LogicGate",
+      "industry": "Technology",
+      "remoteType": "Fully Remote",
+      "url": "https://www.logicgate.com/company/careers/",
+      "notes": "GRC (Governance, Risk & Compliance) platform. Fully remote across the US.",
+      "dateAdded": "2025-06-08",
+      "linkedinPostUrl": "https://www.linkedin.com/posts/manali-kulkarni-4b44b017a_companies-hiring-for-100-remote-1-atlassian-share-7469274218577326081-WUPF/"
+    },
+    {
+      "id": "faire",
+      "name": "Faire",
+      "industry": "E-Commerce",
+      "remoteType": "Fully Remote",
+      "url": "https://www.faire.com/careers",
+      "notes": "B2B wholesale marketplace for independent retailers. Remote roles in eng and product.",
+      "dateAdded": "2025-06-08",
+      "linkedinPostUrl": "https://www.linkedin.com/posts/manali-kulkarni-4b44b017a_companies-hiring-for-100-remote-1-atlassian-share-7469274218577326081-WUPF/"
+    },
+    {
+      "id": "renaissance",
+      "name": "Renaissance",
+      "industry": "Education",
+      "remoteType": "Fully Remote",
+      "url": "https://jobs.smartrecruiters.com/RenaissanceLearning",
+      "notes": "EdTech — reading and math learning acceleration platform for K-12. Remote-first org.",
+      "dateAdded": "2025-06-08",
+      "linkedinPostUrl": "https://www.linkedin.com/posts/manali-kulkarni-4b44b017a_companies-hiring-for-100-remote-1-atlassian-share-7469274218577326081-WUPF/"
+    },
+    {
+      "id": "rec-room",
+      "name": "Rec Room",
+      "industry": "Technology",
+      "remoteType": "Fully Remote",
+      "url": "https://recroom.com/careers",
+      "notes": "Social gaming / virtual worlds platform. Fully distributed engineering and design team.",
+      "dateAdded": "2025-06-08",
+      "linkedinPostUrl": "https://www.linkedin.com/posts/manali-kulkarni-4b44b017a_companies-hiring-for-100-remote-1-atlassian-share-7469274218577326081-WUPF/"
+    },
+    {
+      "id": "vgs",
+      "name": "VGS",
+      "industry": "Technology",
+      "remoteType": "Fully Remote",
+      "url": "https://www.verygoodsecurity.com/careers",
+      "notes": "Very Good Security — data security and PCI compliance platform. Remote-first fintech infrastructure.",
+      "dateAdded": "2025-06-08",
+      "linkedinPostUrl": "https://www.linkedin.com/posts/manali-kulkarni-4b44b017a_companies-hiring-for-100-remote-1-atlassian-share-7469274218577326081-WUPF/"
+    },
+    {
+      "id": "vast-data",
+      "name": "VAST Data",
+      "industry": "Technology",
+      "remoteType": "Fully Remote",
+      "url": "https://vastdata.com/about/careers",
+      "notes": "AI infrastructure and data storage platform. Fast-scaling deep-tech startup.",
+      "dateAdded": "2025-06-08",
+      "linkedinPostUrl": "https://www.linkedin.com/posts/manali-kulkarni-4b44b017a_companies-hiring-for-100-remote-1-atlassian-share-7469274218577326081-WUPF/"
+    },
+    {
+      "id": "sorcero",
+      "name": "Sorcero",
+      "industry": "Technology",
+      "remoteType": "Fully Remote",
+      "url": "https://www.sorcero.com/careers",
+      "notes": "AI for medical affairs and life sciences. Fully remote team across US and Europe.",
+      "dateAdded": "2025-06-08",
+      "linkedinPostUrl": "https://www.linkedin.com/posts/manali-kulkarni-4b44b017a_companies-hiring-for-100-remote-1-atlassian-share-7469274218577326081-WUPF/"
+    },
+    {
+      "id": "mcgraw-hill",
+      "name": "McGraw Hill",
+      "industry": "Education",
+      "remoteType": "Fully Remote",
+      "url": "https://www.mheducation.com/careers",
+      "notes": "Global educational publisher and digital learning platform. Many remote roles across all functions.",
+      "dateAdded": "2025-06-08",
+      "linkedinPostUrl": "https://www.linkedin.com/posts/manali-kulkarni-4b44b017a_companies-hiring-for-100-remote-1-atlassian-share-7469274218577326081-WUPF/"
+    },
+    {
+      "id": "patreon",
+      "name": "Patreon",
+      "industry": "Media",
+      "remoteType": "Fully Remote",
+      "url": "https://www.patreon.com/careers",
+      "notes": "Creator membership platform. Remote-friendly culture with distributed teams.",
+      "dateAdded": "2025-06-08",
+      "linkedinPostUrl": "https://www.linkedin.com/posts/manali-kulkarni-4b44b017a_companies-hiring-for-100-remote-1-atlassian-share-7469274218577326081-WUPF/"
+    },
+    {
+      "id": "beekeeper",
+      "name": "Beekeeper",
+      "industry": "Technology",
+      "remoteType": "Fully Remote",
+      "url": "https://www.beekeeper.io/careers/",
+      "notes": "Frontline worker communication platform. Remote-first with hubs in Zurich and San Francisco.",
+      "dateAdded": "2025-06-08",
+      "linkedinPostUrl": "https://www.linkedin.com/posts/manali-kulkarni-4b44b017a_companies-hiring-for-100-remote-1-atlassian-share-7469274218577326081-WUPF/"
+    },
+    {
+      "id": "upwork",
+      "name": "Upwork",
+      "industry": "Technology",
+      "remoteType": "Fully Remote",
+      "url": "https://www.upwork.com/l/careers",
+      "notes": "Global freelance marketplace. Remote-first company — practices what it preaches.",
+      "dateAdded": "2025-06-08",
+      "linkedinPostUrl": "https://www.linkedin.com/posts/manali-kulkarni-4b44b017a_companies-hiring-for-100-remote-1-atlassian-share-7469274218577326081-WUPF/"
+    },
+    {
+      "id": "docusign",
+      "name": "DocuSign",
+      "industry": "Technology",
+      "remoteType": "Fully Remote",
+      "url": "https://careers.docusign.com/",
+      "notes": "eSignature and agreement cloud. Many remote roles in engineering, sales, and product.",
+      "dateAdded": "2025-06-08",
+      "linkedinPostUrl": "https://www.linkedin.com/posts/manali-kulkarni-4b44b017a_companies-hiring-for-100-remote-1-atlassian-share-7469274218577326081-WUPF/"
+    },
+    {
+      "id": "dealhub",
+      "name": "DealHub.io",
+      "industry": "Technology",
+      "remoteType": "Fully Remote",
+      "url": "https://dealhub.io/careers/",
+      "notes": "Revenue platform for B2B sales teams (CPQ, CLM). Remote-distributed team.",
+      "dateAdded": "2025-06-08",
+      "linkedinPostUrl": "https://www.linkedin.com/posts/manali-kulkarni-4b44b017a_companies-hiring-for-100-remote-1-atlassian-share-7469274218577326081-WUPF/"
+    },
+    {
+      "id": "census",
+      "name": "Census",
+      "industry": "Technology",
+      "remoteType": "Fully Remote",
+      "url": "https://www.getcensus.com/careers",
+      "notes": "Reverse ETL — syncs data warehouse to business tools. Small, fully remote team.",
+      "dateAdded": "2025-06-08",
+      "linkedinPostUrl": "https://www.linkedin.com/posts/manali-kulkarni-4b44b017a_companies-hiring-for-100-remote-1-atlassian-share-7469274218577326081-WUPF/"
+    },
+    {
+      "id": "intrado",
+      "name": "Intrado",
+      "industry": "Technology",
+      "remoteType": "Fully Remote",
+      "url": "https://intrado.jobs.net/en-US/search?keywords=remote",
+      "notes": "Communications technology for enterprises. Many remote roles in tech and operations.",
+      "dateAdded": "2025-06-08",
+      "linkedinPostUrl": "https://www.linkedin.com/posts/manali-kulkarni-4b44b017a_companies-hiring-for-100-remote-1-atlassian-share-7469274218577326081-WUPF/"
+    },
+    {
+      "id": "upstart",
+      "name": "Upstart",
+      "industry": "Finance",
+      "remoteType": "Fully Remote",
+      "url": "https://www.upstart.com/careers/",
+      "notes": "AI-powered lending platform. Cloud-first and remote-friendly across engineering and data roles.",
+      "dateAdded": "2025-06-08",
+      "linkedinPostUrl": "https://www.linkedin.com/posts/manali-kulkarni-4b44b017a_companies-hiring-for-100-remote-1-atlassian-share-7469274218577326081-WUPF/"
+    },
+    {
+      "id": "funded-club",
+      "name": "Funded.club",
+      "industry": "Finance",
+      "remoteType": "Fully Remote",
+      "url": "https://funded.club/careers",
+      "notes": "Startup funding community and tools. Fully remote team.",
+      "dateAdded": "2025-06-08",
+      "linkedinPostUrl": "https://www.linkedin.com/posts/manali-kulkarni-4b44b017a_companies-hiring-for-100-remote-1-atlassian-share-7469274218577326081-WUPF/"
+    },
+    {
+      "id": "workiva",
+      "name": "Workiva",
+      "industry": "Finance",
+      "remoteType": "Fully Remote",
+      "url": "https://www.workiva.com/careers",
+      "notes": "Cloud platform for financial reporting and ESG. Remote roles in engineering and finance.",
+      "dateAdded": "2025-06-08",
+      "linkedinPostUrl": "https://www.linkedin.com/posts/manali-kulkarni-4b44b017a_companies-hiring-for-100-remote-1-atlassian-share-7469274218577326081-WUPF/"
+    },
+    {
+      "id": "missionwired",
+      "name": "MissionWired",
+      "industry": "Marketing",
+      "remoteType": "Fully Remote",
+      "url": "https://missionwired.com/careers/",
+      "notes": "Digital fundraising and advocacy for nonprofits. Fully remote team.",
+      "dateAdded": "2025-06-08",
+      "linkedinPostUrl": "https://www.linkedin.com/posts/manali-kulkarni-4b44b017a_companies-hiring-for-100-remote-1-atlassian-share-7469274218577326081-WUPF/"
+    },
+    {
+      "id": "workera",
+      "name": "Workera",
+      "industry": "Education",
+      "remoteType": "Fully Remote",
+      "url": "https://job-boards.greenhouse.io/workera",
+      "notes": "AI skills intelligence platform (founded by Andrew Ng's team). Remote-first hiring.",
+      "dateAdded": "2025-06-08",
+      "linkedinPostUrl": "https://www.linkedin.com/posts/manali-kulkarni-4b44b017a_companies-hiring-for-100-remote-1-atlassian-share-7469274218577326081-WUPF/"
+    },
+    {
+      "id": "jenius-bank",
+      "name": "Jenius Bank",
+      "industry": "Finance",
+      "remoteType": "Fully Remote",
+      "url": "https://www.jeniusbank.com/careers",
+      "notes": "Digital-first bank (subsidiary of SMBC Group). Remote roles across tech and banking.",
+      "dateAdded": "2025-06-08",
+      "linkedinPostUrl": "https://www.linkedin.com/posts/manali-kulkarni-4b44b017a_companies-hiring-for-100-remote-1-atlassian-share-7469274218577326081-WUPF/"
+    },
+    {
+      "id": "goinstacare",
+      "name": "Goinstacare",
+      "industry": "Healthcare",
+      "remoteType": "Fully Remote",
+      "url": "https://www.goinstacare.com/careers",
+      "notes": "On-demand healthcare staffing platform. Remote roles in tech and operations.",
+      "dateAdded": "2025-06-08",
+      "linkedinPostUrl": "https://www.linkedin.com/posts/manali-kulkarni-4b44b017a_companies-hiring-for-100-remote-1-atlassian-share-7469274218577326081-WUPF/"
+    },
+    {
+      "id": "uplers",
+      "name": "Uplers",
+      "industry": "Technology",
+      "remoteType": "Fully Remote",
+      "url": "https://www.uplers.com/",
+      "notes": "Remote talent network connecting global professionals with US/AU companies. Fully distributed.",
+      "dateAdded": "2025-06-08",
+      "linkedinPostUrl": "https://www.linkedin.com/posts/manali-kulkarni-4b44b017a_companies-hiring-for-100-remote-1-atlassian-share-7469274218577326081-WUPF/"
+    },
+    {
+      "id": "quantum-metric",
+      "name": "Quantum Metric",
+      "industry": "Technology",
+      "remoteType": "Fully Remote",
+      "url": "https://www.quantummetric.com/company/careers/",
+      "notes": "Continuous product design platform. Remote roles in engineering, customer success, and sales.",
+      "dateAdded": "2025-06-08",
+      "linkedinPostUrl": "https://www.linkedin.com/posts/manali-kulkarni-4b44b017a_companies-hiring-for-100-remote-1-atlassian-share-7469274218577326081-WUPF/"
+    },
+    {
+      "id": "canonical",
+      "name": "Canonical",
+      "industry": "Technology",
+      "remoteType": "Fully Remote",
+      "url": "https://canonical.com/careers",
+      "notes": "Makes Ubuntu Linux. Fully distributed company since founding — team across 70+ countries.",
+      "dateAdded": "2025-06-08",
+      "linkedinPostUrl": "https://www.linkedin.com/posts/manali-kulkarni-4b44b017a_companies-hiring-for-100-remote-1-atlassian-share-7469274218577326081-WUPF/"
+    },
+    {
+      "id": "kemecon",
+      "name": "Kemecon",
+      "industry": "Technology",
+      "remoteType": "Fully Remote",
+      "url": "https://www.kemecon.com/",
+      "notes": "Technology consulting and solutions company. Remote hiring.",
+      "dateAdded": "2025-06-08",
+      "linkedinPostUrl": "https://www.linkedin.com/posts/manali-kulkarni-4b44b017a_companies-hiring-for-100-remote-1-atlassian-share-7469274218577326081-WUPF/"
+    },
+    {
+      "id": "digitalocean",
+      "name": "DigitalOcean",
+      "industry": "Technology",
+      "remoteType": "Fully Remote",
+      "url": "https://www.digitalocean.com/careers",
+      "notes": "Cloud infrastructure for developers and startups. Remote roles across engineering and GTM.",
+      "dateAdded": "2025-06-08",
+      "linkedinPostUrl": "https://www.linkedin.com/posts/manali-kulkarni-4b44b017a_companies-hiring-for-100-remote-1-atlassian-share-7469274218577326081-WUPF/"
+    },
+    {
+      "id": "cloudflare",
+      "name": "Cloudflare",
+      "industry": "Technology",
+      "remoteType": "Fully Remote",
+      "url": "https://www.cloudflare.com/careers/",
+      "notes": "CDN, security, and edge computing platform. Remote roles globally across all functions.",
+      "dateAdded": "2025-06-08",
+      "linkedinPostUrl": "https://www.linkedin.com/posts/manali-kulkarni-4b44b017a_companies-hiring-for-100-remote-1-atlassian-share-7469274218577326081-WUPF/"
+    },
+    {
+      "id": "angelone",
+      "name": "AngelOne",
+      "industry": "Finance",
+      "remoteType": "Fully Remote",
+      "url": "https://www.angelone.in/careers",
+      "notes": "Indian stock broking and wealth management platform. Remote tech roles available.",
+      "dateAdded": "2025-06-08",
+      "linkedinPostUrl": "https://www.linkedin.com/posts/manali-kulkarni-4b44b017a_companies-hiring-for-100-remote-1-atlassian-share-7469274218577326081-WUPF/"
+    },
+    {
+      "id": "appcues",
+      "name": "Appcues",
+      "industry": "Technology",
+      "remoteType": "Fully Remote",
+      "url": "https://www.appcues.com/careers",
+      "notes": "No-code product adoption platform. Fully remote team focused on user onboarding.",
+      "dateAdded": "2025-06-08",
+      "linkedinPostUrl": "https://www.linkedin.com/posts/manali-kulkarni-4b44b017a_companies-hiring-for-100-remote-1-atlassian-share-7469274218577326081-WUPF/"
+    },
+    {
+      "id": "arkency",
+      "name": "Arkency",
+      "industry": "Technology",
+      "remoteType": "Fully Remote",
+      "url": "https://arkency.com/jobs",
+      "notes": "Remote Ruby on Rails consultancy. Fully async and distributed since founding.",
+      "dateAdded": "2025-06-08",
+      "linkedinPostUrl": "https://www.linkedin.com/posts/manali-kulkarni-4b44b017a_companies-hiring-for-100-remote-1-atlassian-share-7469274218577326081-WUPF/"
+    },
+    {
+      "id": "awesomemotive",
+      "name": "Awesomemotive",
+      "industry": "Technology",
+      "remoteType": "Fully Remote",
+      "url": "https://awesomemotive.com/careers/",
+      "notes": "Makes WPForms, OptinMonster, MonsterInsights. Fully distributed WordPress ecosystem company.",
+      "dateAdded": "2025-06-08",
+      "linkedinPostUrl": "https://www.linkedin.com/posts/manali-kulkarni-4b44b017a_companies-hiring-for-100-remote-1-atlassian-share-7469274218577326081-WUPF/"
+    },
+    {
+      "id": "constructor",
+      "name": "Constructor",
+      "industry": "Technology",
+      "remoteType": "Fully Remote",
+      "url": "https://constructor.io/careers/",
+      "notes": "AI-powered search and product discovery for ecommerce. Remote-first engineering team.",
+      "dateAdded": "2025-06-08",
+      "linkedinPostUrl": "https://www.linkedin.com/posts/manali-kulkarni-4b44b017a_companies-hiring-for-100-remote-1-atlassian-share-7469274218577326081-WUPF/"
+    },
+    {
+      "id": "contra",
+      "name": "Contra",
+      "industry": "Technology",
+      "remoteType": "Fully Remote",
+      "url": "https://contra.com/careers",
+      "notes": "Independent work platform. Commission-free freelance marketplace. Fully remote team.",
+      "dateAdded": "2025-06-08",
+      "linkedinPostUrl": "https://www.linkedin.com/posts/manali-kulkarni-4b44b017a_companies-hiring-for-100-remote-1-atlassian-share-7469274218577326081-WUPF/"
+    },
+    {
+      "id": "doist",
+      "name": "Doist",
+      "industry": "Technology",
+      "remoteType": "Fully Remote",
+      "url": "https://doist.com/careers",
+      "notes": "Makes Todoist and Twist. Async-first, fully remote since 2007. Pioneer of remote culture.",
+      "dateAdded": "2025-06-08",
+      "linkedinPostUrl": "https://www.linkedin.com/posts/manali-kulkarni-4b44b017a_companies-hiring-for-100-remote-1-atlassian-share-7469274218577326081-WUPF/"
+    },
+    {
+      "id": "duckduckgo",
+      "name": "DuckDuckGo",
+      "industry": "Technology",
+      "remoteType": "Fully Remote",
+      "url": "https://duckduckgo.com/hiring",
+      "notes": "Privacy-first search engine and browser. Fully remote team across multiple continents.",
+      "dateAdded": "2025-06-08",
+      "linkedinPostUrl": "https://www.linkedin.com/posts/manali-kulkarni-4b44b017a_companies-hiring-for-100-remote-1-atlassian-share-7469274218577326081-WUPF/"
+    },
+    {
+      "id": "bold",
+      "name": "Bold",
+      "industry": "E-Commerce",
+      "remoteType": "Fully Remote",
+      "url": "https://www.boldcommerce.com/careers",
+      "notes": "Headless checkout and commerce solutions. Remote-first company based in Canada.",
+      "dateAdded": "2025-06-08",
+      "linkedinPostUrl": "https://www.linkedin.com/posts/manali-kulkarni-4b44b017a_companies-hiring-for-100-remote-1-atlassian-share-7469274218577326081-WUPF/"
+    },
+    {
+      "id": "akamai-technologies",
+      "name": "Akamai Technologies",
+      "industry": "Technology",
+      "remoteType": "Fully Remote",
+      "url": "https://www.akamai.com/careers",
+      "notes": "Edge cloud and CDN platform. Large distributed team with many remote roles globally.",
+      "dateAdded": "2025-06-08",
+      "linkedinPostUrl": "https://www.linkedin.com/posts/manali-kulkarni-4b44b017a_companies-hiring-for-100-remote-1-atlassian-share-7469274218577326081-WUPF/"
+    },
+    {
+      "id": "symetra",
+      "name": "Symetra",
+      "industry": "Finance",
+      "remoteType": "Fully Remote",
+      "url": "https://www.symetra.com/about-us/careers/",
+      "notes": "Life insurance and employee benefits provider. Several remote roles in tech and actuarial functions.",
+      "dateAdded": "2025-06-08",
+      "linkedinPostUrl": "https://www.linkedin.com/posts/manali-kulkarni-4b44b017a_companies-hiring-for-100-remote-1-atlassian-share-7469274218577326081-WUPF/"
+    },
+    {
+      "id": "mentorsity",
+      "name": "Mentorsity",
+      "industry": "Education",
+      "remoteType": "Fully Remote",
+      "url": "https://app.pyjamahr.com/careers?company=Mentorsity",
+      "notes": "Mentorship and coaching platform. Fully remote hiring via their careers portal.",
+      "dateAdded": "2025-06-08",
+      "linkedinPostUrl": "https://www.linkedin.com/posts/manali-kulkarni-4b44b017a_companies-hiring-for-100-remote-1-atlassian-share-7469274218577326081-WUPF/"
+    },
+    {
+      "id": "expert-thinking",
+      "name": "Expert Thinking",
+      "industry": "Technology",
+      "remoteType": "Fully Remote",
+      "url": "https://expert-thinking.co.uk/",
+      "notes": "Technology consulting and digital transformation. Remote-first UK-based firm.",
+      "dateAdded": "2025-06-08",
+      "linkedinPostUrl": "https://www.linkedin.com/posts/manali-kulkarni-4b44b017a_companies-hiring-for-100-remote-1-atlassian-share-7469274218577326081-WUPF/"
+    },
+    {
+      "id": "ivisa",
+      "name": "iVisa",
+      "industry": "Technology",
+      "remoteType": "Fully Remote",
+      "url": "https://ivisa.breezy.hr/",
+      "notes": "Online visa and travel document processing. Fully remote team across Americas and Europe.",
+      "dateAdded": "2025-06-08",
+      "linkedinPostUrl": "https://www.linkedin.com/posts/manali-kulkarni-4b44b017a_companies-hiring-for-100-remote-1-atlassian-share-7469274218577326081-WUPF/"
+    },
+    {
+      "id": "affordmate",
+      "name": "Affordmate",
+      "industry": "Finance",
+      "remoteType": "Fully Remote",
+      "url": "https://www.affordmate.com/",
+      "notes": "Affordable housing finance technology. Fully remote startup.",
+      "dateAdded": "2025-06-08",
+      "linkedinPostUrl": "https://www.linkedin.com/posts/manali-kulkarni-4b44b017a_companies-hiring-for-100-remote-1-atlassian-share-7469274218577326081-WUPF/"
+    },
+    {
+      "id": "xapobank",
+      "name": "Xapobank",
+      "industry": "Finance",
+      "remoteType": "Fully Remote",
+      "url": "https://www.xapobank.com/en/careers",
+      "notes": "Bitcoin-native private bank. Fully distributed team — one of the most remote-first banks globally.",
+      "dateAdded": "2025-06-08",
+      "linkedinPostUrl": "https://www.linkedin.com/posts/manali-kulkarni-4b44b017a_companies-hiring-for-100-remote-1-atlassian-share-7469274218577326081-WUPF/"
+    },
+    {
+      "id": "cloudbeds",
+      "name": "Cloudbeds",
+      "industry": "Technology",
+      "remoteType": "Fully Remote",
+      "url": "https://www.cloudbeds.com/careers/",
+      "notes": "Hospitality management platform for hotels and vacation rentals. Fully remote team.",
+      "dateAdded": "2025-06-08",
+      "linkedinPostUrl": "https://www.linkedin.com/posts/manali-kulkarni-4b44b017a_companies-hiring-for-100-remote-1-atlassian-share-7469274218577326081-WUPF/"
     }
   ]
 }
