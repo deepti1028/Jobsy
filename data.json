@@ -1,6 +1,7 @@
 {
   "version": "1.0",
   "lastUpdated": "2025-06-08",
+  "_note": "Job portals (platforms to find remote work) are tagged with industry: Job Platform",
   "companies": [
     {
       "id": "gitlab",
@@ -641,6 +642,276 @@
       "notes": "Hospitality management platform for hotels and vacation rentals. Fully remote team.",
       "dateAdded": "2025-06-08",
       "linkedinPostUrl": "https://www.linkedin.com/posts/manali-kulkarni-4b44b017a_companies-hiring-for-100-remote-1-atlassian-share-7469274218577326081-WUPF/"
+    },
+    {
+      "id": "powertofly",
+      "name": "PowerToFly",
+      "industry": "Job Platform",
+      "remoteType": "Fully Remote",
+      "url": "https://powertofly.com/",
+      "notes": "Remote job platform with a strong focus on diversity hiring and underrepresented talent.",
+      "dateAdded": "2025-06-08",
+      "linkedinPostUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7434275518864191489/"
+    },
+    {
+      "id": "toptal",
+      "name": "Toptal",
+      "industry": "Job Platform",
+      "remoteType": "Fully Remote",
+      "url": "https://www.toptal.com/",
+      "notes": "Premium remote freelance network for top-tier tech and finance talent (top 3% acceptance).",
+      "dateAdded": "2025-06-08",
+      "linkedinPostUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7434275518864191489/"
+    },
+    {
+      "id": "gun-io",
+      "name": "Gun.io",
+      "industry": "Job Platform",
+      "remoteType": "Fully Remote",
+      "url": "https://www.gun.io/",
+      "notes": "Vetted remote developer job network. Quality-screened freelance and full-time roles.",
+      "dateAdded": "2025-06-08",
+      "linkedinPostUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7434275518864191489/"
+    },
+    {
+      "id": "authentic-jobs",
+      "name": "Authentic Jobs",
+      "industry": "Job Platform",
+      "remoteType": "Fully Remote",
+      "url": "https://authenticjobs.com/",
+      "notes": "Curated remote jobs in design, development, and tech. Long-running niche job board.",
+      "dateAdded": "2025-06-08",
+      "linkedinPostUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7434275518864191489/"
+    },
+    {
+      "id": "landing-jobs",
+      "name": "Landing.Jobs",
+      "industry": "Job Platform",
+      "remoteType": "Fully Remote",
+      "url": "https://landing.jobs/",
+      "notes": "Tech job platform with strong remote options across Europe and globally.",
+      "dateAdded": "2025-06-08",
+      "linkedinPostUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7434275518864191489/"
+    },
+    {
+      "id": "dailyremote",
+      "name": "DailyRemote",
+      "industry": "Job Platform",
+      "remoteType": "Fully Remote",
+      "url": "https://dailyremote.com/",
+      "notes": "Daily curated remote job postings across tech, marketing, writing, and more.",
+      "dateAdded": "2025-06-08",
+      "linkedinPostUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7434275518864191489/"
+    },
+    {
+      "id": "peopleperhour",
+      "name": "PeoplePerHour",
+      "industry": "Job Platform",
+      "remoteType": "Fully Remote",
+      "url": "https://www.peopleperhour.com/",
+      "notes": "UK-based freelance remote work marketplace covering design, dev, writing, and more.",
+      "dateAdded": "2025-06-08",
+      "linkedinPostUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7434275518864191489/"
+    },
+    {
+      "id": "freelancer",
+      "name": "Freelancer",
+      "industry": "Job Platform",
+      "remoteType": "Fully Remote",
+      "url": "https://www.freelancer.com/",
+      "notes": "Global freelance marketplace with millions of remote projects across all skill categories.",
+      "dateAdded": "2025-06-08",
+      "linkedinPostUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7434275518864191489/"
+    },
+    {
+      "id": "europeremotely",
+      "name": "EuropeRemotely",
+      "industry": "Job Platform",
+      "remoteType": "Fully Remote",
+      "url": "https://europeremotely.com/",
+      "notes": "Remote job board focused on European and worldwide opportunities in tech and digital roles.",
+      "dateAdded": "2025-06-08",
+      "linkedinPostUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7438406112573345792/"
+    },
+    {
+      "id": "nodesk",
+      "name": "NoDesk",
+      "industry": "Job Platform",
+      "remoteType": "Fully Remote",
+      "url": "https://nodesk.co/",
+      "notes": "Remote-only jobs for developers, designers, and digital nomads. Clean, minimal job board.",
+      "dateAdded": "2025-06-08",
+      "linkedinPostUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7438406112573345792/"
+    },
+    {
+      "id": "justremote",
+      "name": "JustRemote",
+      "industry": "Job Platform",
+      "remoteType": "Fully Remote",
+      "url": "https://justremote.co/",
+      "notes": "100% remote jobs across all roles and skill levels. Simple, clean interface.",
+      "dateAdded": "2025-06-08",
+      "linkedinPostUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7438406112573345792/"
+    },
+    {
+      "id": "pangian",
+      "name": "Pangian",
+      "industry": "Job Platform",
+      "remoteType": "Fully Remote",
+      "url": "https://pangian.com/",
+      "notes": "Worldwide remote jobs and community for location-independent professionals.",
+      "dateAdded": "2025-06-08",
+      "linkedinPostUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7438406112573345792/"
+    },
+    {
+      "id": "remotetechjobs",
+      "name": "RemoteTechJobs",
+      "industry": "Job Platform",
+      "remoteType": "Fully Remote",
+      "url": "https://www.remotetechjobs.com/",
+      "notes": "Tech-focused remote job board with roles in engineering, product, and data.",
+      "dateAdded": "2025-06-08",
+      "linkedinPostUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7438406112573345792/"
+    },
+    {
+      "id": "remote100k",
+      "name": "Remote100K",
+      "industry": "Job Platform",
+      "remoteType": "Fully Remote",
+      "url": "https://remote100k.com/",
+      "notes": "Curated remote jobs paying $100K+ at top companies. Quality over quantity.",
+      "dateAdded": "2025-06-08",
+      "linkedinPostUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7438406112573345792/"
+    },
+    {
+      "id": "outsourcely",
+      "name": "Outsourcely",
+      "industry": "Job Platform",
+      "remoteType": "Fully Remote",
+      "url": "https://www.outsourcely.com/",
+      "notes": "Remote jobs from global companies. Direct hire platform connecting startups with remote talent.",
+      "dateAdded": "2025-06-08",
+      "linkedinPostUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7438406112573345792/"
+    },
+    {
+      "id": "remote4me",
+      "name": "Remote4Me",
+      "industry": "Job Platform",
+      "remoteType": "Fully Remote",
+      "url": "https://remote4.me/",
+      "notes": "Worldwide remote job aggregator across all skill categories.",
+      "dateAdded": "2025-06-08",
+      "linkedinPostUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7438406112573345792/"
+    },
+    {
+      "id": "hubstaff-talent",
+      "name": "Hubstaff Talent",
+      "industry": "Job Platform",
+      "remoteType": "Fully Remote",
+      "url": "https://talent.hubstaff.com/",
+      "notes": "Free remote talent marketplace by Hubstaff. No fees for employers or contractors.",
+      "dateAdded": "2025-06-08",
+      "linkedinPostUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7438406112573345792/"
+    },
+    {
+      "id": "arc-dev",
+      "name": "Arc",
+      "industry": "Job Platform",
+      "remoteType": "Fully Remote",
+      "url": "https://arc.dev/",
+      "notes": "Vetted remote developer positions with quality companies. Rigorous screening for candidates.",
+      "dateAdded": "2025-06-08",
+      "linkedinPostUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7455224994931863552/"
+    },
+    {
+      "id": "wellfound",
+      "name": "Wellfound",
+      "industry": "Job Platform",
+      "remoteType": "Fully Remote",
+      "url": "https://wellfound.com/",
+      "notes": "Formerly AngelList Talent. Best platform for startup and early-stage remote roles.",
+      "dateAdded": "2025-06-08",
+      "linkedinPostUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7455224994931863552/"
+    },
+    {
+      "id": "working-nomads",
+      "name": "Working Nomads",
+      "industry": "Job Platform",
+      "remoteType": "Fully Remote",
+      "url": "https://www.workingnomads.com/jobs",
+      "notes": "Curated remote jobs for location-independent professionals. Email digest available.",
+      "dateAdded": "2025-06-08",
+      "linkedinPostUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7455224994931863552/"
+    },
+    {
+      "id": "remoteok",
+      "name": "RemoteOK",
+      "industry": "Job Platform",
+      "remoteType": "Fully Remote",
+      "url": "https://remoteok.com/",
+      "notes": "Fast-updating remote job board. Strong focus on tech and startup roles. By Pieter Levels.",
+      "dateAdded": "2025-06-08",
+      "linkedinPostUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7455224994931863552/"
+    },
+    {
+      "id": "skipthedrive",
+      "name": "SkipTheDrive",
+      "industry": "Job Platform",
+      "remoteType": "Fully Remote",
+      "url": "https://www.skipthedrive.com/",
+      "notes": "US-focused remote and flexible job listings. Good for hybrid and fully remote searches.",
+      "dateAdded": "2025-06-08",
+      "linkedinPostUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7455224994931863552/"
+    },
+    {
+      "id": "jobspresso",
+      "name": "Jobspresso",
+      "industry": "Job Platform",
+      "remoteType": "Fully Remote",
+      "url": "https://jobspresso.co/",
+      "notes": "Hand-picked remote jobs across tech, marketing, customer support, and more.",
+      "dateAdded": "2025-06-08",
+      "linkedinPostUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7455224994931863552/"
+    },
+    {
+      "id": "weworkremotely",
+      "name": "We Work Remotely",
+      "industry": "Job Platform",
+      "remoteType": "Fully Remote",
+      "url": "https://weworkremotely.com/",
+      "notes": "One of the largest remote job boards. 200K+ monthly visitors. Global opportunities.",
+      "dateAdded": "2025-06-08",
+      "linkedinPostUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7455224994931863552/"
+    },
+    {
+      "id": "twine",
+      "name": "Twine",
+      "industry": "Job Platform",
+      "remoteType": "Fully Remote",
+      "url": "https://www.twine.net/",
+      "notes": "Freelance and remote creative jobs. Focuses on design, video, audio, and marketing roles.",
+      "dateAdded": "2025-06-08",
+      "linkedinPostUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7455224994931863552/"
+    },
+    {
+      "id": "virtualvocations",
+      "name": "VirtualVocations",
+      "industry": "Job Platform",
+      "remoteType": "Fully Remote",
+      "url": "https://www.virtualvocations.com/",
+      "notes": "Legitimate hand-screened remote job listings. Subscription model with quality curation.",
+      "dateAdded": "2025-06-08",
+      "linkedinPostUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7455224994931863552/"
+    },
+    {
+      "id": "himalayas",
+      "name": "Himalayas",
+      "industry": "Job Platform",
+      "remoteType": "Fully Remote",
+      "url": "https://himalayas.app/",
+      "notes": "Remote job board with free AI tools including a job application tracker. Clean UX.",
+      "dateAdded": "2025-06-08",
+      "linkedinPostUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7455224994931863552/"
     }
   ]
 }
