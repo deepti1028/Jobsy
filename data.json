@@ -1,0 +1,106 @@
+{
+  "version": "1.0",
+  "lastUpdated": "2025-06-08",
+  "companies": [
+    {
+      "id": "gitlab",
+      "name": "GitLab",
+      "industry": "Technology",
+      "remoteType": "Fully Remote",
+      "url": "https://about.gitlab.com/jobs/",
+      "notes": "Fully distributed since founding — 2000+ team across 65+ countries. Great async culture.",
+      "dateAdded": "2024-01-15",
+      "linkedinPostUrl": null
+    },
+    {
+      "id": "automattic",
+      "name": "Automattic",
+      "industry": "Technology",
+      "remoteType": "Fully Remote",
+      "url": "https://automattic.com/work-with-us/",
+      "notes": "Makes WordPress.com, Tumblr, WooCommerce. Team across 90+ countries.",
+      "dateAdded": "2024-01-18",
+      "linkedinPostUrl": null
+    },
+    {
+      "id": "zapier",
+      "name": "Zapier",
+      "industry": "Technology",
+      "remoteType": "Fully Remote",
+      "url": "https://zapier.com/jobs",
+      "notes": "Automation tooling. Strong remote culture with competitive benefits.",
+      "dateAdded": "2024-02-02",
+      "linkedinPostUrl": null
+    },
+    {
+      "id": "buffer",
+      "name": "Buffer",
+      "industry": "Marketing",
+      "remoteType": "Fully Remote",
+      "url": "https://buffer.com/journey",
+      "notes": "Social media tools. Extremely transparent — posts salaries publicly.",
+      "dateAdded": "2024-02-10",
+      "linkedinPostUrl": null
+    },
+    {
+      "id": "shopify",
+      "name": "Shopify",
+      "industry": "E-Commerce",
+      "remoteType": "Remote-First",
+      "url": "https://www.shopify.com/careers",
+      "notes": "Went digital-by-default in 2020. Strong engineering culture.",
+      "dateAdded": "2024-02-14",
+      "linkedinPostUrl": null
+    },
+    {
+      "id": "figma",
+      "name": "Figma",
+      "industry": "Design",
+      "remoteType": "Remote-Friendly",
+      "url": "https://www.figma.com/careers/",
+      "notes": "Design tools. Many remote roles in engineering and product.",
+      "dateAdded": "2024-02-20",
+      "linkedinPostUrl": null
+    },
+    {
+      "id": "linear",
+      "name": "Linear",
+      "industry": "Technology",
+      "remoteType": "Remote-First",
+      "url": "https://linear.app/careers",
+      "notes": "Issue tracking for product teams. Small and highly selective hiring.",
+      "dateAdded": "2024-03-01",
+      "linkedinPostUrl": null
+    },
+    {
+      "id": "stripe",
+      "name": "Stripe",
+      "industry": "Finance",
+      "remoteType": "Remote-Friendly",
+      "url": "https://stripe.com/jobs",
+      "notes": "Payments infrastructure. Many remote engineering roles, offices globally.",
+      "dateAdded": "2024-03-05",
+      "linkedinPostUrl": null
+    },
+    {
+      "id": "notion",
+      "name": "Notion",
+      "industry": "Technology",
+      "remoteType": "Remote-Friendly",
+      "url": "https://www.notion.so/careers",
+      "notes": "Productivity tooling. Growing team with remote roles across multiple time zones.",
+      "dateAdded": "2024-03-10",
+      "linkedinPostUrl": null
+    },
+    {
+      "id": "basecamp",
+      "name": "Basecamp",
+      "industry": "Technology",
+      "remoteType": "Fully Remote",
+      "url": "https://basecamp.com/jobs",
+      "notes": "Project management pioneers. Small team, wrote the book on remote work.",
+      "dateAdded": "2024-03-14",
+      "linkedinPostUrl": null
+    }
+  ]
+}

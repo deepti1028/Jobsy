@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jobsy — Remote Companies Tracker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            --p:   #9FA1FF;
+            --pl:  #B5BAFF;
+            --sky: #AEE2FF;
+            --mint:#D9F9DF;
+            --td:  #1e1e3a;
+            --tm:  #4b4b70;
+            --tl:  #9090b8;
+            --bg:  #f5f5ff;
+            --white:#ffffff;
+        }
+
+        html { font-size: 16px; scroll-behavior: smooth; }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            color: var(--td);
+            min-height: 100vh;
+            background: var(--bg);
+            overflow-x: hidden;
+        }
+
+        /* Background */
+        .bg {
+            position: fixed; inset: 0; z-index: 0; pointer-events: none;
+            background:
+                radial-gradient(ellipse 75% 60% at 8% 12%,  rgba(217,249,223,.75) 0%, transparent 55%),
+                radial-gradient(ellipse 60% 75% at 92% 82%, rgba(174,226,255,.65) 0%, transparent 55%),
+                radial-gradient(ellipse 65% 45% at 58% 5%,  rgba(181,186,255,.55) 0%, transparent 50%),
+                radial-gradient(ellipse 50% 60% at 18% 72%, rgba(159,161,255,.3)  0%, transparent 55%),
+                #f5f5ff;
+        }
+        .bg::after {
+            content:''; position:absolute; inset:0;
+            background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.025'/%3E%3C/svg%3E");
+            opacity:.6;
+        }
+
+        /* Nav */
+        nav {
+            position:sticky; top:0; z-index:100;
+            backdrop-filter:blur(24px); -webkit-backdrop-filter:blur(24px);
+            background:rgba(245,245,255,.83);
+            border-bottom:1px solid rgba(159,161,255,.14);
+        }
+        .nav-inner {
+            max-width:1200px; margin:0 auto; padding:14px 28px;
+            display:flex; align-items:center; justify-content:space-between;
+        }
+        .logo {
+            font-family:'Cormorant Garamond',serif;
+            font-size:1.55rem; font-weight:600; color:var(--td); letter-spacing:-.025em;
+        }
+        .logo em { font-style:normal; color:var(--p); }
+
+        .nav-right { display:flex; align-items:center; gap:12px; }
+
+        .stats-chip {
+            background:rgba(159,161,255,.1); border:1px solid rgba(159,161,255,.22);
+            border-radius:100px; padding:5px 15px;
+            font-size:.78rem; font-weight:500; color:var(--tm);
+        }
+        .stats-chip strong { color:var(--p); }
+
+        .sync-badge {
+            display:flex; align-items:center; gap:5px;
+            font-size:.72rem; color:var(--tl); font-weight:500;
+        }
+        .sync-dot {
+            width:6px; height:6px; border-radius:50%;
+            background:#5ac47a;
+        }
+        .sync-dot.local { background:#f0c060; }
+
+        /* Export btn */
+        .export-btn {
+            padding:6px 14px; border:1px solid rgba(159,161,255,.3);
+            border-radius:100px; background:transparent;
+            font-family:'DM Sans',sans-serif; font-size:.75rem;
+            color:var(--tm); cursor:pointer; transition:all .18s;
+            display:flex; align-items:center; gap:5px;
+        }
+        .export-btn:hover { border-color:var(--p); color:var(--p); background:rgba(159,161,255,.07); }
+
+        /* Wrapper */
+        .wrapper { position:relative; z-index:1; max-width:1200px; margin:0 auto; padding:0 28px; }
+
+        /* Hero */
+        .hero {
+            padding:64px 0 40px;
+            display:flex; flex-direction:column; align-items:center; text-align:center;
+        }
+        .hero-eyebrow {
+            display:inline-flex; align-items:center; gap:7px;
+            background:rgba(217,249,223,.6); border:1px solid rgba(61,150,80,.18);
+            border-radius:100px; padding:5px 14px;
+            font-size:.72rem; font-weight:500; color:#3a7a4a;
+            letter-spacing:.05em; text-transform:uppercase; margin-bottom:20px;
+        }
+        .hero-eyebrow::before {
+            content:''; width:7px; height:7px; background:#5ac47a;
+            border-radius:50%; animation:pulse 2s ease-in-out infinite;
+        }
+        @keyframes pulse {
+            0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.5;transform:scale(.75)}
+        }
+        .hero h1 {
+            font-family:'Cormorant Garamond',serif;
+            font-size:clamp(2.8rem,6vw,4.6rem); font-weight:300;
+            line-height:1.07; letter-spacing:-.025em; color:var(--td); margin-bottom:16px;
+        }
+        .hero h1 em {
+            font-style:italic; font-weight:400; color:var(--p); position:relative; display:inline-block;
+        }
+        .hero h1 em::after {
+            content:''; position:absolute; left:4px; right:4px; bottom:0;
+            height:2px; background:linear-gradient(90deg,transparent,var(--pl),transparent);
+            border-radius:2px;
+        }
+        .hero p { font-size:1.02rem; color:var(--tm); font-weight:300; max-width:400px; line-height:1.6; }
+
+        /* Deco dots */
+        .deco { position:fixed; pointer-events:none; opacity:.18; }
+        .deco-l { left:3%; top:14%; }
+        .deco-r { right:3%; top:20%; transform:rotate(45deg); }
+
+        /* Action bar */
+        .action-bar {
+            display:flex; gap:10px; align-items:center; margin-bottom:8px; flex-wrap:wrap;
+        }
+        .search-wrap { flex:1; min-width:200px; position:relative; }
+        .search-icon {
+            position:absolute; left:12px; top:50%; transform:translateY(-50%);
+            color:var(--tl); pointer-events:none;
+        }
+        .search-input {
+            width:100%; padding:11px 12px 11px 36px;
+            background:rgba(255,255,255,.88); border:1.5px solid rgba(159,161,255,.18);
+            border-radius:12px; font-family:'DM Sans',sans-serif; font-size:.87rem;
+            color:var(--td); outline:none; transition:all .2s;
+        }
+        .search-input::placeholder { color:var(--tl); }
+        .search-input:focus {
+            border-color:var(--p); background:white;
+            box-shadow:0 0 0 3px rgba(159,161,255,.13);
+        }
+        .fsel {
+            padding:11px 32px 11px 12px;
+            background:rgba(255,255,255,.88) url("data:image/svg+xml,%3Csvg width='11' height='7' viewBox='0 0 11 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L5.5 6L10 1' stroke='%239090b8' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat right 11px center;
+            border:1.5px solid rgba(159,161,255,.18); border-radius:12px;
+            font-family:'DM Sans',sans-serif; font-size:.84rem; color:var(--tm);
+            outline:none; cursor:pointer; appearance:none; transition:all .2s;
+        }
+        .fsel:focus { border-color:var(--p); box-shadow:0 0 0 3px rgba(159,161,255,.13); }
+        .add-btn {
+            padding:11px 20px; background:var(--p); color:white; border:none;
+            border-radius:12px; font-family:'DM Sans',sans-serif; font-size:.87rem;
+            font-weight:500; cursor:pointer; white-space:nowrap;
+            display:flex; align-items:center; gap:6px;
+            transition:all .22s cubic-bezier(.34,1.56,.64,1);
+        }
+        .add-btn:hover { background:#8a8cf0; transform:translateY(-2px); box-shadow:0 6px 24px rgba(159,161,255,.4); }
+        .add-btn:active { transform:translateY(0); }
+
+        /* Section label */
+        .sec-label {
+            display:flex; align-items:center; gap:12px; margin:20px 0 16px;
+        }
+        .sec-label span {
+            font-size:.74rem; text-transform:uppercase; letter-spacing:.1em;
+            color:var(--tl); font-weight:500; white-space:nowrap;
+        }
+        .sec-label::after {
+            content:''; flex:1; height:1px;
+            background:linear-gradient(90deg,rgba(159,161,255,.2),transparent);
+        }
+
+        /* Grid */
+        .grid {
+            display:grid;
+            grid-template-columns:repeat(auto-fill,minmax(305px,1fr));
+            gap:15px; padding-bottom:88px;
+        }
+
+        /* Card */
+        .card {
+            background:rgba(255,255,255,.92); backdrop-filter:blur(12px);
+            border:1px solid rgba(159,161,255,.14); border-radius:18px;
+            padding:20px; position:relative; overflow:hidden;
+            transition:all .3s cubic-bezier(.25,.46,.45,.94);
+            animation:cardIn .38s cubic-bezier(.25,.46,.45,.94) backwards;
+        }
+        @keyframes cardIn { from{opacity:0;transform:translateY(13px)} to{opacity:1;transform:translateY(0)} }
+        .card::before {
+            content:''; position:absolute; top:0; left:0; right:0; height:3px;
+            background:linear-gradient(90deg,var(--pl),var(--sky),var(--mint));
+            opacity:0; transition:opacity .3s;
+        }
+        .card:hover { box-shadow:0 8px 36px rgba(159,161,255,.22); transform:translateY(-3px); border-color:rgba(159,161,255,.28); }
+        .card:hover::before { opacity:1; }
+
+        .card-head { display:flex; align-items:flex-start; gap:12px; margin-bottom:12px; }
+        .c-logo {
+            width:42px; height:42px; border-radius:10px; flex-shrink:0;
+            display:flex; align-items:center; justify-content:center;
+            font-family:'Cormorant Garamond',serif; font-size:1.05rem; font-weight:600;
+            color:white; letter-spacing:-.01em;
+        }
+        .c-info { flex:1; min-width:0; }
+        .c-name {
+            font-weight:600; font-size:.97rem; color:var(--td);
+            margin-bottom:2px; letter-spacing:-.015em;
+            white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+        }
+        .c-industry { font-size:.76rem; color:var(--tl); }
+
+        .remote-badge {
+            flex-shrink:0; padding:3px 9px; border-radius:100px;
+            font-size:.69rem; font-weight:500;
+        }
+        .b-full    { background:rgba(217,249,223,.75); color:#377748; border:1px solid rgba(55,119,72,.18); }
+        .b-first   { background:rgba(174,226,255,.7);  color:#2a6a96; border:1px solid rgba(42,106,150,.18); }
+        .b-friendly{ background:rgba(181,186,255,.55); color:#5556c2; border:1px solid rgba(85,86,194,.18); }
+
+        /* LinkedIn source tag */
+        .li-tag {
+            display:inline-flex; align-items:center; gap:4px;
+            background:rgba(10,102,194,.07); border:1px solid rgba(10,102,194,.15);
+            border-radius:100px; padding:2px 8px;
+            font-size:.67rem; color:#0a66c2; font-weight:500;
+            margin-bottom:9px; text-decoration:none;
+            transition:background .18s;
+        }
+        .li-tag:hover { background:rgba(10,102,194,.12); }
+
+        /* Local-only badge */
+        .local-tag {
+            display:inline-flex; align-items:center; gap:4px;
+            background:rgba(240,192,96,.12); border:1px solid rgba(240,192,96,.3);
+            border-radius:100px; padding:2px 8px;
+            font-size:.67rem; color:#b07d10; font-weight:500;
+            margin-bottom:9px;
+        }
+
+        .card-link {
+            display:flex; align-items:center; gap:7px; padding:8px 11px;
+            background:rgba(159,161,255,.07); border:1px solid rgba(159,161,255,.13);
+            border-radius:10px; margin-bottom:10px;
+            text-decoration:none; transition:all .2s;
+        }
+        .card-link:hover { background:rgba(159,161,255,.14); border-color:var(--p); }
+        .li-ico { color:var(--p); flex-shrink:0; }
+        .card-link-url {
+            font-size:.79rem; color:var(--p); font-weight:500;
+            overflow:hidden; text-overflow:ellipsis; white-space:nowrap; flex:1;
+        }
+        .la { color:var(--pl); flex-shrink:0; }
+
+        .card-notes {
+            font-size:.79rem; color:var(--tl); line-height:1.55; margin-bottom:12px;
+            display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden;
+            font-style:italic;
+        }
+        .card-foot { display:flex; align-items:center; justify-content:space-between; }
+        .card-date { font-size:.69rem; color:var(--tl); }
+        .card-acts { display:flex; gap:5px; }
+        .ibtn {
+            width:28px; height:28px; border-radius:7px;
+            border:1px solid rgba(159,161,255,.18); background:transparent;
+            cursor:pointer; display:flex; align-items:center; justify-content:center;
+            color:var(--tl); transition:all .18s;
+        }
+        .ibtn:hover { border-color:var(--p); color:var(--p); background:rgba(159,161,255,.1); }
+        .ibtn.del:hover { border-color:#ffa0a2; color:#f06264; background:rgba(240,98,100,.08); }
+
+        /* Empty */
+        .empty {
+            grid-column:1/-1; text-align:center; padding:88px 24px;
+        }
+        .empty-icon { font-size:2.8rem; display:block; opacity:.3; margin-bottom:16px; }
+        .empty h3 { font-family:'Cormorant Garamond',serif; font-size:1.55rem; font-weight:300; color:var(--tm); margin-bottom:8px; }
+        .empty p { font-size:.87rem; color:var(--tl); }
+
+        /* Dup warning */
+        .dup-banner {
+            display:none; align-items:center; gap:10px; padding:12px 16px;
+            background:rgba(240,192,96,.12); border:1px solid rgba(240,192,96,.35);
+            border-radius:12px; margin-bottom:14px;
+            font-size:.82rem; color:#8a5e00;
+        }
+        .dup-banner.show { display:flex; }
+
+        /* Modal */
+        .overlay {
+            position:fixed; inset:0; z-index:200;
+            background:rgba(28,28,52,.42); backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px);
+            display:flex; align-items:center; justify-content:center; padding:20px;
+            opacity:0; pointer-events:none; transition:opacity .24s;
+        }
+        .overlay.open { opacity:1; pointer-events:all; }
+        .modal {
+            background:white; border-radius:22px; padding:32px 30px;
+            width:100%; max-width:460px; position:relative;
+            box-shadow:0 28px 80px rgba(28,28,52,.18);
+            transform:translateY(18px) scale(.97);
+            transition:transform .3s cubic-bezier(.34,1.4,.64,1);
+            max-height:92vh; overflow-y:auto;
+        }
+        .overlay.open .modal { transform:translateY(0) scale(1); }
+        .modal-title {
+            font-family:'Cormorant Garamond',serif; font-size:1.72rem;
+            font-weight:300; margin-bottom:22px; color:var(--td);
+        }
+        .modal-title em { font-style:italic; color:var(--p); }
+        .mclose {
+            position:absolute; top:18px; right:18px; width:30px; height:30px;
+            border-radius:7px; border:1px solid rgba(159,161,255,.2); background:transparent;
+            cursor:pointer; display:flex; align-items:center; justify-content:center;
+            color:var(--tl); transition:all .18s;
+        }
+        .mclose:hover { border-color:var(--p); color:var(--p); background:rgba(159,161,255,.08); }
+        .fg { margin-bottom:15px; }
+        label { display:block; font-size:.72rem; font-weight:500; color:var(--tm); text-transform:uppercase; letter-spacing:.07em; margin-bottom:5px; }
+        .fi,.fs,.fta {
+            width:100%; padding:10px 12px; background:#f7f7ff;
+            border:1.5px solid rgba(159,161,255,.18); border-radius:11px;
+            font-family:'DM Sans',sans-serif; font-size:.87rem; color:var(--td);
+            outline:none; transition:all .2s;
+        }
+        .fi::placeholder,.fta::placeholder { color:var(--tl); }
+        .fi:focus,.fs:focus,.fta:focus { border-color:var(--p); background:white; box-shadow:0 0 0 3px rgba(159,161,255,.12); }
+        .fs {
+            appearance:none; background-image:url("data:image/svg+xml,%3Csvg width='11' height='7' viewBox='0 0 11 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L5.5 6L10 1' stroke='%239090b8' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+            background-repeat:no-repeat; background-position:right 11px center; background-color:#f7f7ff;
+            cursor:pointer; padding-right:30px;
+        }
+        .fta { resize:vertical; min-height:74px; line-height:1.55; }
+        .frow { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+        .mbtns { display:flex; gap:10px; margin-top:22px; }
+        .bcnl {
+            flex:1; padding:11px; background:transparent;
+            border:1.5px solid rgba(159,161,255,.22); border-radius:11px;
+            font-family:'DM Sans',sans-serif; font-size:.87rem; color:var(--tm); cursor:pointer; transition:all .18s;
+        }
+        .bcnl:hover { border-color:var(--p); color:var(--p); }
+        .bsav {
+            flex:2; padding:11px; background:var(--p); border:none; border-radius:11px;
+            font-family:'DM Sans',sans-serif; font-size:.87rem; font-weight:500;
+            color:white; cursor:pointer; transition:all .2s;
+        }
+        .bsav:hover { background:#8a8cf0; box-shadow:0 4px 18px rgba(159,161,255,.4); }
+
+        /* Toast */
+        .toast {
+            position:fixed; bottom:28px; left:50%;
+            transform:translateX(-50%) translateY(14px);
+            background:var(--td); color:white; padding:10px 22px;
+            border-radius:100px; font-size:.83rem; opacity:0;
+            transition:all .3s cubic-bezier(.34,1.56,.64,1);
+            z-index:300; pointer-events:none; white-space:nowrap;
+        }
+        .toast.show { opacity:1; transform:translateX(-50%) translateY(0); }
+
+        @media(max-width:640px) {
+            .hero { padding:44px 0 30px; }
+            .deco { display:none; }
+            .frow { grid-template-columns:1fr; }
+            .action-bar { flex-direction:column; }
+            .search-wrap,.fsel,.add-btn { width:100%; }
+            .add-btn { justify-content:center; }
+            .wrapper { padding:0 14px; }
+            .modal { padding:24px 18px; }
+            .nav-right .export-btn { display:none; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="bg"></div>
+
+<!-- Deco dots -->
+<svg class="deco deco-l" width="130" height="130" viewBox="0 0 130 130" fill="none">
+    <circle cx="18" cy="18" r="4"   fill="#9FA1FF"/>
+    <circle cx="46" cy="9"  r="2.5" fill="#AEE2FF"/>
+    <circle cx="76" cy="26" r="3.5" fill="#B5BAFF"/>
+    <circle cx="9"  cy="52" r="2"   fill="#D9F9DF"/>
+    <circle cx="32" cy="45" r="5"   fill="#9FA1FF" opacity=".5"/>
+    <circle cx="62" cy="57" r="2"   fill="#AEE2FF"/>
+    <circle cx="90" cy="42" r="3"   fill="#D9F9DF"/>
+    <circle cx="18" cy="88" r="2.5" fill="#B5BAFF"/>
+    <circle cx="50" cy="78" r="4"   fill="#9FA1FF" opacity=".4"/>
+</svg>
+<svg class="deco deco-r" width="130" height="130" viewBox="0 0 130 130" fill="none">
+    <circle cx="112" cy="18" r="4"   fill="#D9F9DF"/>
+    <circle cx="84"  cy="9"  r="2.5" fill="#9FA1FF"/>
+    <circle cx="56"  cy="28" r="3.5" fill="#AEE2FF"/>
+    <circle cx="120" cy="52" r="2"   fill="#B5BAFF"/>
+    <circle cx="98"  cy="45" r="5"   fill="#D9F9DF" opacity=".5"/>
+    <circle cx="70"  cy="60" r="2"   fill="#9FA1FF"/>
+    <circle cx="42"  cy="43" r="3"   fill="#AEE2FF"/>
+    <circle cx="112" cy="88" r="2.5" fill="#D9F9DF"/>
+    <circle cx="82"  cy="78" r="4"   fill="#B5BAFF" opacity=".5"/>
+</svg>
+
+<nav>
+    <div class="nav-inner">
+        <div class="logo">Job<em>sy</em></div>
+        <div class="nav-right">
+            <div class="sync-badge">
+                <span class="sync-dot" id="sync-dot"></span>
+                <span id="sync-txt">Loading…</span>
+            </div>
+            <div class="stats-chip"><strong id="count">0</strong> companies</div>
+            <button class="export-btn" id="export-btn">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                    <polyline points="7 10 12 15 17 10"/>
+                    <line x1="12" y1="15" x2="12" y2="3"/>
+                </svg>
+                Export data.json
+            </button>
+        </div>
+    </div>
+</nav>
+
+<div class="wrapper">
+    <div class="hero">
+        <div class="hero-eyebrow">Remote job search, organized</div>
+        <h1>Companies that hire<br><em>remotely</em></h1>
+        <p>Your personal board of remote-friendly employers — built from LinkedIn posts & manual research, all in one place.</p>
+    </div>
+
+    <div class="action-bar">
+        <div class="search-wrap">
+            <svg class="search-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            </svg>
+            <input type="search" class="search-input" id="q" placeholder="Search by name, industry, notes…">
+        </div>
+        <select class="fsel" id="ftype">
+            <option value="">All types</option>
+            <option value="Fully Remote">Fully Remote</option>
+            <option value="Remote-First">Remote-First</option>
+            <option value="Remote-Friendly">Remote-Friendly</option>
+        </select>
+        <select class="fsel" id="find">
+            <option value="">All industries</option>
+            <option>Technology</option><option>Design</option><option>Finance</option>
+            <option>Marketing</option><option>Healthcare</option><option>Education</option>
+            <option>E-Commerce</option><option>Media</option>
+        </select>
+        <button class="add-btn" id="open-modal">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+            </svg>
+            Add Company
+        </button>
+    </div>
+
+    <div class="sec-label">
+        <span id="rlabel">All Companies</span>
+    </div>
+
+    <div class="grid" id="grid"></div>
+</div>
+
+<!-- Modal -->
+<div class="overlay" id="overlay">
+    <div class="modal">
+        <button class="mclose" id="mclose">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+            </svg>
+        </button>
+        <h2 class="modal-title" id="modal-title">Add a <em>Company</em></h2>
+
+        <div class="dup-banner" id="dup-banner">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            <span id="dup-msg">A company with this name or URL already exists.</span>
+        </div>
+
+        <form id="form" novalidate>
+            <input type="hidden" id="eid">
+            <div class="fg">
+                <label>Company Name *</label>
+                <input class="fi" id="fn" type="text" placeholder="e.g. Notion, GitLab…" required>
+            </div>
+            <div class="frow">
+                <div class="fg">
+                    <label>Industry</label>
+                    <select class="fs" id="fi-s">
+                        <option value="">Select…</option>
+                        <option>Technology</option><option>Design</option><option>Finance</option>
+                        <option>Marketing</option><option>Healthcare</option><option>Education</option>
+                        <option>E-Commerce</option><option>Media</option><option>Other</option>
+                    </select>
+                </div>
+                <div class="fg">
+                    <label>Remote Type</label>
+                    <select class="fs" id="fr">
+                        <option>Fully Remote</option>
+                        <option>Remote-First</option>
+                        <option>Remote-Friendly</option>
+                    </select>
+                </div>
+            </div>
+            <div class="fg">
+                <label>Job Portal URL *</label>
+                <input class="fi" id="fu" type="url" placeholder="https://company.com/careers" required>
+            </div>
+            <div class="fg">
+                <label>Notes</label>
+                <textarea class="fta" id="fno" placeholder="Hiring for specific roles, timezone info, tech stack…"></textarea>
+            </div>
+            <div class="mbtns">
+                <button type="button" class="bcnl" id="mcnl">Cancel</button>
+                <button type="submit" class="bsav" id="msav">Save Company</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+// ── Constants ──────────────────────────────────────────────
+const LS_KEY    = 'jobsy_local_v1';
+const COLORS    = [
+    ['#9FA1FF','#AEE2FF'],['#B5BAFF','#D9F9DF'],['#AEE2FF','#9FA1FF'],
+    ['#D9F9DF','#B5BAFF'],['#9FA1FF','#D9F9DF'],['#AEE2FF','#B5BAFF'],
+];
+
+// ── State ──────────────────────────────────────────────────
+let repoData  = [];   // loaded from data.json
+let localData = [];   // loaded from localStorage
+let merged    = [];   // combined, deduped
+let editingId = null;
+
+// ── Normalizers for dedup ──────────────────────────────────
+function nUrl(u) {
+    try { return new URL(u).hostname.replace(/^www\./,'') + new URL(u).pathname.replace(/\/$/,'').toLowerCase(); }
+    catch { return u.toLowerCase().replace(/^https?:\/\/(www\.)?/,'').replace(/\/$/,''); }
+}
+function nName(n) { return n.toLowerCase().trim().replace(/\s+/g,' '); }
+
+function isDuplicate(name, url, excludeId) {
+    return merged.some(c =>
+        c.id !== excludeId &&
+        (nName(c.name) === nName(name) || nUrl(c.url) === nUrl(url))
+    );
+}
+
+// ── Merge logic ────────────────────────────────────────────
+function mergeData() {
+    const seen = new Set();
+    merged = [];
+    for (const c of [...repoData, ...localData]) {
+        const key = nName(c.name) + '|' + nUrl(c.url);
+        if (!seen.has(key)) { seen.add(key); merged.push(c); }
+    }
+}
+
+// ── Load data.json ─────────────────────────────────────────
+async function loadRepo() {
+    try {
+        const r = await fetch('./data.json?t=' + Date.now());
+        if (!r.ok) throw new Error();
+        const json = await r.json();
+        repoData = (json.companies || []).map(c => ({ ...c, _src: 'repo' }));
+        setSyncBadge(true);
+    } catch {
+        repoData = [];
+        setSyncBadge(false);
+    }
+}
+
+function setSyncBadge(synced) {
+    const dot = document.getElementById('sync-dot');
+    const txt = document.getElementById('sync-txt');
+    if (synced) {
+        dot.className = 'sync-dot';
+        txt.textContent = 'Synced with repo';
+    } else {
+        dot.className = 'sync-dot local';
+        txt.textContent = 'Local only';
+    }
+}
+
+// ── Load localStorage ──────────────────────────────────────
+function loadLocal() {
+    try { localData = JSON.parse(localStorage.getItem(LS_KEY)) || []; }
+    catch { localData = []; }
+    localData = localData.map(c => ({ ...c, _src: 'local' }));
+}
+
+function saveLocal() {
+    const toSave = localData.map(({ _src, ...rest }) => rest);
+    localStorage.setItem(LS_KEY, JSON.stringify(toSave));
+}
+
+// ── Helpers ────────────────────────────────────────────────
+function esc(s) {
+    if (!s) return '';
+    return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+function initials(n) { return n.split(' ').slice(0,2).map(w=>w[0]).join('').toUpperCase(); }
+function logoGrad(n) { const [a,b] = COLORS[n.charCodeAt(0) % COLORS.length]; return `linear-gradient(135deg,${a},${b})`; }
+function fmtDate(d) { return new Date(d).toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'}); }
+function shortUrl(u) {
+    try { const p = new URL(u); return p.hostname.replace(/^www\./,'') + (p.pathname !== '/' ? p.pathname : ''); }
+    catch { return u.replace(/^https?:\/\/(www\.)?/,'').replace(/\/$/,''); }
+}
+function badgeClass(t) {
+    if (t==='Fully Remote') return 'b-full';
+    if (t==='Remote-First') return 'b-first';
+    return 'b-friendly';
+}
+function slugify(name) {
+    return name.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
+}
+
+// ── Render ─────────────────────────────────────────────────
+function renderCards(list) {
+    document.getElementById('count').textContent = merged.length;
+    const grid  = document.getElementById('grid');
+    const label = document.getElementById('rlabel');
+
+    if (!list.length) {
+        label.textContent = 'No results';
+        grid.innerHTML = `
+            <div class="empty">
+                <span class="empty-icon">🌿</span>
+                <h3>Nothing here yet</h3>
+                <p>Add your first company or adjust your filters.</p>
+            </div>`;
+        return;
+    }
+
+    label.textContent = list.length === merged.length
+        ? `All Companies — ${merged.length}`
+        : `${list.length} Result${list.length!==1?'s':''}`;
+
+    grid.innerHTML = list.map((c, i) => {
+        const liTag = c.linkedinPostUrl
+            ? `<a href="${esc(c.linkedinPostUrl)}" target="_blank" rel="noopener" class="li-tag">
+                   <svg width="10" height="10" viewBox="0 0 24 24" fill="#0a66c2"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                   Found on LinkedIn
+               </a>` : '';
+        const localTag = c._src === 'local'
+            ? `<span class="local-tag">
+                   <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                   Local
+               </span>` : '';
+
+        return `
+        <div class="card" style="animation-delay:${i*50}ms">
+            <div class="card-head">
+                <div class="c-logo" style="background:${logoGrad(c.name)}">${initials(c.name)}</div>
+                <div class="c-info">
+                    <div class="c-name">${esc(c.name)}</div>
+                    <div class="c-industry">${esc(c.industry||'—')}</div>
+                </div>
+                <span class="remote-badge ${badgeClass(c.remoteType)}">${esc(c.remoteType)}</span>
+            </div>
+            ${liTag}${localTag}
+            <a href="${esc(c.url)}" target="_blank" rel="noopener noreferrer" class="card-link">
+                <svg class="li-ico" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
+                    <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
+                </svg>
+                <span class="card-link-url">${esc(shortUrl(c.url))}</span>
+                <svg class="la" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                    <line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/>
+                </svg>
+            </a>
+            ${c.notes ? `<div class="card-notes">${esc(c.notes)}</div>` : ''}
+            <div class="card-foot">
+                <span class="card-date">Added ${fmtDate(c.dateAdded || c.date)}</span>
+                <div class="card-acts">
+                    <button class="ibtn" onclick="editC('${esc(c.id)}')" title="Edit">
+                        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                            <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
+                            <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
+                        </svg>
+                    </button>
+                    <button class="ibtn del" onclick="delC('${esc(c.id)}')" title="Delete">
+                        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                            <polyline points="3 6 5 6 21 6"/>
+                            <path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/>
+                            <path d="M10 11v6M14 11v6"/>
+                            <path d="M9 6V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>`;
+    }).join('');
+}
+
+function filterRender() {
+    const q  = document.getElementById('q').value.toLowerCase();
+    const ft = document.getElementById('ftype').value;
+    const fi = document.getElementById('find').value;
+    let list = merged;
+    if (q)  list = list.filter(c=>(c.name+' '+(c.industry||'')+' '+(c.notes||'')).toLowerCase().includes(q));
+    if (ft) list = list.filter(c=>c.remoteType===ft);
+    if (fi) list = list.filter(c=>c.industry===fi);
+    renderCards(list);
+}
+
+// ── CRUD ───────────────────────────────────────────────────
+function editC(id) {
+    const c = merged.find(x=>x.id===id);
+    if (!c) return;
+    editingId = id;
+    document.getElementById('eid').value = id;
+    document.getElementById('fn').value  = c.name;
+    document.getElementById('fi-s').value = c.industry||'';
+    document.getElementById('fr').value  = c.remoteType;
+    document.getElementById('fu').value  = c.url;
+    document.getElementById('fno').value = c.notes||'';
+    openModal(true);
+}
+
+function delC(id) {
+    // Remove from local if exists there
+    const prevLen = localData.length;
+    localData = localData.filter(c=>c.id!==id);
+    if (localData.length < prevLen) saveLocal();
+
+    // If it was a repo company, add a "deleted" tombstone in localStorage so it
+    // doesn't reappear on next load — simplest: just filter from merged and re-render
+    // (on page reload it will come back from repo unless user updates data.json)
+    merged = merged.filter(c=>c.id!==id);
+    filterRender();
+    toast('Company removed');
+}
+
+// ── Modal ──────────────────────────────────────────────────
+function openModal(editing=false) {
+    document.getElementById('modal-title').innerHTML = editing ? 'Edit <em>Company</em>' : 'Add a <em>Company</em>';
+    document.getElementById('msav').textContent = editing ? 'Update Company' : 'Save Company';
+    document.getElementById('dup-banner').classList.remove('show');
+    document.getElementById('overlay').classList.add('open');
+    setTimeout(()=>document.getElementById('fn').focus(), 80);
+}
+
+function closeModal() {
+    document.getElementById('overlay').classList.remove('open');
+    document.getElementById('form').reset();
+    document.getElementById('eid').value = '';
+    document.getElementById('dup-banner').classList.remove('show');
+    editingId = null;
+}
+
+// Live dup check while typing
+['fn','fu'].forEach(fid => {
+    document.getElementById(fid).addEventListener('input', () => {
+        const name = document.getElementById('fn').value.trim();
+        const url  = document.getElementById('fu').value.trim();
+        const banner = document.getElementById('dup-banner');
+        if ((name || url) && isDuplicate(name, url, editingId)) {
+            const existing = merged.find(c =>
+                c.id !== editingId &&
+                (nName(c.name) === nName(name) || (url && nUrl(c.url) === nUrl(url)))
+            );
+            document.getElementById('dup-msg').textContent =
+                `"${existing?.name}" is already in your list.`;
+            banner.classList.add('show');
+        } else {
+            banner.classList.remove('show');
+        }
+    });
+});
+
+document.getElementById('form').addEventListener('submit', e => {
+    e.preventDefault();
+    const name     = document.getElementById('fn').value.trim();
+    const industry = document.getElementById('fi-s').value;
+    const remoteType = document.getElementById('fr').value;
+    const url      = document.getElementById('fu').value.trim();
+    const notes    = document.getElementById('fno').value.trim();
+
+    if (!name || !url) return;
+    if (isDuplicate(name, url, editingId)) {
+        document.getElementById('dup-banner').classList.add('show');
+        return;
+    }
+
+    const today = new Date().toISOString().slice(0,10);
+
+    if (editingId) {
+        // Update in merged
+        const idx = merged.findIndex(c=>c.id===editingId);
+        if (idx !== -1) {
+            merged[idx] = { ...merged[idx], name, industry, remoteType, url, notes };
+        }
+        // Sync back: if it was local, update localData
+        const li = localData.findIndex(c=>c.id===editingId);
+        if (li !== -1) {
+            localData[li] = { ...localData[li], name, industry, remoteType, url, notes };
+        } else {
+            // It was a repo company — store the edit as a local override
+            // We add to localData with same id so dedup keeps only one
+            const repoC = repoData.find(c=>c.id===editingId);
+            if (repoC) {
+                // Remove old entry from merged & localData and re-add edited version
+                localData = localData.filter(c=>c.id!==editingId);
+                localData.push({ ...repoC, name, industry, remoteType, url, notes, _src:'local' });
+            }
+        }
+        saveLocal();
+        toast('Company updated ✓');
+    } else {
+        const id = slugify(name) + '-' + Date.now();
+        const newC = { id, name, industry, remoteType, url, notes, dateAdded: today, linkedinPostUrl: null, _src:'local' };
+        localData.unshift(newC);
+        saveLocal();
+        merged.unshift(newC);
+        toast('Company added ✓');
+    }
+
+    closeModal();
+    filterRender();
+});
+
+// ── Export ─────────────────────────────────────────────────
+document.getElementById('export-btn').addEventListener('click', () => {
+    const payload = {
+        version: '1.0',
+        lastUpdated: new Date().toISOString().slice(0,10),
+        companies: merged.map(({ _src, ...rest }) => rest)
+    };
+    const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = 'data.json';
+    a.click();
+    URL.revokeObjectURL(a.href);
+    toast('data.json downloaded — commit it to GitHub to sync!');
+});
+
+// ── Events ─────────────────────────────────────────────────
+document.getElementById('open-modal').addEventListener('click', ()=>openModal(false));
+document.getElementById('mclose').addEventListener('click', closeModal);
+document.getElementById('mcnl').addEventListener('click', closeModal);
+document.getElementById('overlay').addEventListener('click', e=>{
+    if (e.target===document.getElementById('overlay')) closeModal();
+});
+['q','ftype','find'].forEach(id=>{
+    const el = document.getElementById(id);
+    el.addEventListener('input', filterRender);
+    el.addEventListener('change', filterRender);
+});
+
+// ── Toast ──────────────────────────────────────────────────
+function toast(msg) {
+    const t = document.getElementById('toast');
+    t.textContent = msg;
+    t.classList.add('show');
+    setTimeout(()=>t.classList.remove('show'), 3200);
+}
+
+// ── Init ───────────────────────────────────────────────────
+(async () => {
+    loadLocal();
+    await loadRepo();
+    mergeData();
+    filterRender();
+})();
+</script>
+</body>
+</html>
