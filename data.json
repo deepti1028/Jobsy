@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "lastUpdated": "2025-06-08",
+  "lastUpdated": "2026-06-17",
   "_note": "Job portals (platforms to find remote work) are tagged with industry: Job Platform",
   "companies": [
     {
@@ -912,6 +912,296 @@
       "notes": "Remote job board with free AI tools including a job application tracker. Clean UX.",
       "dateAdded": "2025-06-08",
       "linkedinPostUrl": "https://www.linkedin.com/feed/update/urn:li:activity:7455224994931863552/"
+    },
+    {
+      "id": "pindrop",
+      "name": "Pindrop",
+      "industry": "Technology",
+      "remoteType": "Fully Remote",
+      "url": "https://www.pindrop.com/careers/",
+      "notes": "Voice security and deepfake detection platform. Remote US roles across engineering and sales.",
+      "dateAdded": "2026-06-17",
+      "linkedinPostUrl": "https://www.linkedin.com/posts/khushbu-jain-33abb258_30-remote-companies-hiring-remote-talent-share-7472580510360395776-gp2x/"
+    },
+    {
+      "id": "databricks",
+      "name": "Databricks",
+      "industry": "Technology",
+      "remoteType": "Fully Remote",
+      "url": "https://www.databricks.com/company/careers/open-positions",
+      "notes": "Unified data and AI platform built on Apache Spark and Delta Lake. Hundreds of remote roles globally.",
+      "dateAdded": "2026-06-17",
+      "linkedinPostUrl": "https://www.linkedin.com/posts/khushbu-jain-33abb258_30-remote-companies-hiring-remote-talent-share-7472580510360395776-gp2x/"
+    },
+    {
+      "id": "cardinal-health",
+      "name": "Cardinal Health",
+      "industry": "Healthcare",
+      "remoteType": "Fully Remote",
+      "url": "https://jobs.cardinalhealth.com/",
+      "notes": "Global pharmaceutical distribution and medical products company. Many remote roles in tech and operations.",
+      "dateAdded": "2026-06-17",
+      "linkedinPostUrl": "https://www.linkedin.com/posts/khushbu-jain-33abb258_30-remote-companies-hiring-remote-talent-share-7472580510360395776-gp2x/"
+    },
+    {
+      "id": "sophos",
+      "name": "Sophos",
+      "industry": "Technology",
+      "remoteType": "Fully Remote",
+      "url": "https://www.sophos.com/en-us/company/careers",
+      "notes": "Next-gen cybersecurity for endpoint and network protection. Distributed team across multiple countries.",
+      "dateAdded": "2026-06-17",
+      "linkedinPostUrl": "https://www.linkedin.com/posts/khushbu-jain-33abb258_30-remote-companies-hiring-remote-talent-share-7472580510360395776-gp2x/"
+    },
+    {
+      "id": "instacart",
+      "name": "Instacart",
+      "industry": "E-Commerce",
+      "remoteType": "Fully Remote",
+      "url": "https://instacart.careers/",
+      "notes": "Grocery delivery and pickup platform. Remote roles across engineering, data, and product in US and Canada.",
+      "dateAdded": "2026-06-17",
+      "linkedinPostUrl": "https://www.linkedin.com/posts/khushbu-jain-33abb258_30-remote-companies-hiring-remote-talent-share-7472580510360395776-gp2x/"
+    },
+    {
+      "id": "kraken",
+      "name": "Kraken",
+      "industry": "Finance",
+      "remoteType": "Fully Remote",
+      "url": "https://www.kraken.com/en-us/careers",
+      "notes": "One of the largest and most trusted crypto exchanges globally. Fully distributed team.",
+      "dateAdded": "2026-06-17",
+      "linkedinPostUrl": "https://www.linkedin.com/posts/khushbu-jain-33abb258_30-remote-companies-hiring-remote-talent-share-7472580510360395776-gp2x/"
+    },
+    {
+      "id": "alpaca",
+      "name": "Alpaca",
+      "industry": "Finance",
+      "remoteType": "Fully Remote",
+      "url": "https://alpaca.markets/hiring",
+      "notes": "Commission-free stock trading API platform for developers and fintechs. Remote-first team.",
+      "dateAdded": "2026-06-17",
+      "linkedinPostUrl": "https://www.linkedin.com/posts/khushbu-jain-33abb258_30-remote-companies-hiring-remote-talent-share-7472580510360395776-gp2x/"
+    },
+    {
+      "id": "jerry",
+      "name": "Jerry",
+      "industry": "Technology",
+      "remoteType": "Fully Remote",
+      "url": "https://www.getjerry.com/careers",
+      "notes": "AI-powered car super app for insurance, financing, and car management. Remote US team.",
+      "dateAdded": "2026-06-17",
+      "linkedinPostUrl": "https://www.linkedin.com/posts/khushbu-jain-33abb258_30-remote-companies-hiring-remote-talent-share-7472580510360395776-gp2x/"
+    },
+    {
+      "id": "reflow",
+      "name": "Reflow",
+      "industry": "Technology",
+      "remoteType": "Fully Remote",
+      "url": "https://reflow.com/careers",
+      "notes": "Remote-first technology company. Hiring across US and Canada.",
+      "dateAdded": "2026-06-17",
+      "linkedinPostUrl": "https://www.linkedin.com/posts/khushbu-jain-33abb258_30-remote-companies-hiring-remote-talent-share-7472580510360395776-gp2x/"
+    },
+    {
+      "id": "leidos",
+      "name": "Leidos",
+      "industry": "Technology",
+      "remoteType": "Fully Remote",
+      "url": "https://careers.leidos.com/",
+      "notes": "Defense, intelligence, and health technology solutions. Many remote US roles across engineering and IT.",
+      "dateAdded": "2026-06-17",
+      "linkedinPostUrl": "https://www.linkedin.com/posts/khushbu-jain-33abb258_30-remote-companies-hiring-remote-talent-share-7472580510360395776-gp2x/"
+    },
+    {
+      "id": "palo-alto-networks",
+      "name": "Palo Alto Networks",
+      "industry": "Technology",
+      "remoteType": "Fully Remote",
+      "url": "https://www.paloaltonetworks.com/company/careers",
+      "notes": "Enterprise cybersecurity platform leader. Large distributed workforce across network and cloud security.",
+      "dateAdded": "2026-06-17",
+      "linkedinPostUrl": "https://www.linkedin.com/posts/khushbu-jain-33abb258_30-remote-companies-hiring-remote-talent-share-7472580510360395776-gp2x/"
+    },
+    {
+      "id": "icf",
+      "name": "ICF",
+      "industry": "Other",
+      "remoteType": "Fully Remote",
+      "url": "https://www.icf.com/careers",
+      "notes": "Management consulting and technology services firm. Many remote US roles across government and health sectors.",
+      "dateAdded": "2026-06-17",
+      "linkedinPostUrl": "https://www.linkedin.com/posts/khushbu-jain-33abb258_30-remote-companies-hiring-remote-talent-share-7472580510360395776-gp2x/"
+    },
+    {
+      "id": "oyster",
+      "name": "Oyster",
+      "industry": "Technology",
+      "remoteType": "Fully Remote",
+      "url": "https://www.oysterhr.com/careers",
+      "notes": "Global employer of record (EOR) platform for hiring distributed teams. Fully remote company itself.",
+      "dateAdded": "2026-06-17",
+      "linkedinPostUrl": "https://www.linkedin.com/posts/khushbu-jain-33abb258_30-remote-companies-hiring-remote-talent-share-7472580510360395776-gp2x/"
+    },
+    {
+      "id": "alignerr",
+      "name": "Alignerr",
+      "industry": "Technology",
+      "remoteType": "Fully Remote",
+      "url": "https://alignerr.com/careers",
+      "notes": "AI training and human feedback platform connecting AI researchers with expert annotators globally.",
+      "dateAdded": "2026-06-17",
+      "linkedinPostUrl": "https://www.linkedin.com/posts/khushbu-jain-33abb258_30-remote-companies-hiring-remote-talent-share-7472580510360395776-gp2x/"
+    },
+    {
+      "id": "ashby",
+      "name": "Ashby",
+      "industry": "Technology",
+      "remoteType": "Fully Remote",
+      "url": "https://www.ashbyhq.com/careers",
+      "notes": "All-in-one recruiting software for high-growth companies. Fully distributed remote team.",
+      "dateAdded": "2026-06-17",
+      "linkedinPostUrl": "https://www.linkedin.com/posts/khushbu-jain-33abb258_30-remote-companies-hiring-remote-talent-share-7472580510360395776-gp2x/"
+    },
+    {
+      "id": "coverflex",
+      "name": "Coverflex",
+      "industry": "Technology",
+      "remoteType": "Fully Remote",
+      "url": "https://coverflex.com/en/careers",
+      "notes": "Employee benefits and compensation management platform. Distributed team across Europe.",
+      "dateAdded": "2026-06-17",
+      "linkedinPostUrl": "https://www.linkedin.com/posts/khushbu-jain-33abb258_30-remote-companies-hiring-remote-talent-share-7472580510360395776-gp2x/"
+    },
+    {
+      "id": "zillow",
+      "name": "Zillow",
+      "industry": "Technology",
+      "remoteType": "Fully Remote",
+      "url": "https://www.zillow.com/careers/",
+      "notes": "Real estate marketplace and home search platform. Remote-first with roles across engineering, data, and product.",
+      "dateAdded": "2026-06-17",
+      "linkedinPostUrl": "https://www.linkedin.com/posts/khushbu-jain-33abb258_30-remote-companies-hiring-remote-talent-share-7472580510360395776-gp2x/"
+    },
+    {
+      "id": "handshake",
+      "name": "Handshake",
+      "industry": "Technology",
+      "remoteType": "Fully Remote",
+      "url": "https://joinhandshake.com/careers/",
+      "notes": "Early career recruitment network connecting students and recent grads with employers. Remote US team.",
+      "dateAdded": "2026-06-17",
+      "linkedinPostUrl": "https://www.linkedin.com/posts/khushbu-jain-33abb258_30-remote-companies-hiring-remote-talent-share-7472580510360395776-gp2x/"
+    },
+    {
+      "id": "deel",
+      "name": "Deel",
+      "industry": "Technology",
+      "remoteType": "Fully Remote",
+      "url": "https://www.deel.com/careers",
+      "notes": "Global payroll, HR, and compliance platform for distributed teams. Fully remote company itself.",
+      "dateAdded": "2026-06-17",
+      "linkedinPostUrl": "https://www.linkedin.com/posts/khushbu-jain-33abb258_30-remote-companies-hiring-remote-talent-share-7472580510360395776-gp2x/"
+    },
+    {
+      "id": "smartcat",
+      "name": "Smartcat",
+      "industry": "Technology",
+      "remoteType": "Fully Remote",
+      "url": "https://www.smartcat.com/company/careers/",
+      "notes": "AI-powered translation and localization platform. Fully remote team across multiple countries.",
+      "dateAdded": "2026-06-17",
+      "linkedinPostUrl": "https://www.linkedin.com/posts/khushbu-jain-33abb258_30-remote-companies-hiring-remote-talent-share-7472580510360395776-gp2x/"
+    },
+    {
+      "id": "ruby-labs",
+      "name": "Ruby Labs",
+      "industry": "Technology",
+      "remoteType": "Fully Remote",
+      "url": "https://rubylabs.com/careers/",
+      "notes": "Mobile app development company behind health and lifestyle apps. Fully remote team globally.",
+      "dateAdded": "2026-06-17",
+      "linkedinPostUrl": "https://www.linkedin.com/posts/khushbu-jain-33abb258_30-remote-companies-hiring-remote-talent-share-7472580510360395776-gp2x/"
+    },
+    {
+      "id": "redis",
+      "name": "Redis",
+      "industry": "Technology",
+      "remoteType": "Fully Remote",
+      "url": "https://redis.io/careers/",
+      "notes": "The company behind the Redis in-memory database and Redis Cloud. Distributed remote team.",
+      "dateAdded": "2026-06-17",
+      "linkedinPostUrl": "https://www.linkedin.com/posts/khushbu-jain-33abb258_30-remote-companies-hiring-remote-talent-share-7472580510360395776-gp2x/"
+    },
+    {
+      "id": "allara",
+      "name": "Allara",
+      "industry": "Healthcare",
+      "remoteType": "Fully Remote",
+      "url": "https://www.allarahealth.com/careers",
+      "notes": "Telehealth platform for women with hormonal and metabolic conditions (PCOS, thyroid, etc.). Remote US team.",
+      "dateAdded": "2026-06-17",
+      "linkedinPostUrl": "https://www.linkedin.com/posts/khushbu-jain-33abb258_30-remote-companies-hiring-remote-talent-share-7472580510360395776-gp2x/"
+    },
+    {
+      "id": "socure",
+      "name": "Socure",
+      "industry": "Technology",
+      "remoteType": "Fully Remote",
+      "url": "https://www.socure.com/company/careers",
+      "notes": "AI-powered digital identity verification platform. Fully remote US team across engineering and product.",
+      "dateAdded": "2026-06-17",
+      "linkedinPostUrl": "https://www.linkedin.com/posts/khushbu-jain-33abb258_30-remote-companies-hiring-remote-talent-share-7472580510360395776-gp2x/"
+    },
+    {
+      "id": "turquoise-health",
+      "name": "Turquoise Health",
+      "industry": "Healthcare",
+      "remoteType": "Fully Remote",
+      "url": "https://turquoise.health/careers",
+      "notes": "Healthcare pricing transparency platform helping patients and employers compare hospital prices. Remote US.",
+      "dateAdded": "2026-06-17",
+      "linkedinPostUrl": "https://www.linkedin.com/posts/khushbu-jain-33abb258_30-remote-companies-hiring-remote-talent-share-7472580510360395776-gp2x/"
+    },
+    {
+      "id": "mixpanel",
+      "name": "Mixpanel",
+      "industry": "Technology",
+      "remoteType": "Fully Remote",
+      "url": "https://mixpanel.com/jobs/",
+      "notes": "Product analytics platform for tracking user behavior and growth. Remote-first team globally.",
+      "dateAdded": "2026-06-17",
+      "linkedinPostUrl": "https://www.linkedin.com/posts/khushbu-jain-33abb258_30-remote-companies-hiring-remote-talent-share-7472580510360395776-gp2x/"
+    },
+    {
+      "id": "datadog",
+      "name": "Datadog",
+      "industry": "Technology",
+      "remoteType": "Fully Remote",
+      "url": "https://careers.datadoghq.com/",
+      "notes": "Cloud monitoring and observability platform. Large remote workforce across engineering, sales, and support.",
+      "dateAdded": "2026-06-17",
+      "linkedinPostUrl": "https://www.linkedin.com/posts/khushbu-jain-33abb258_30-remote-companies-hiring-remote-talent-share-7472580510360395776-gp2x/"
+    },
+    {
+      "id": "sprinter-health",
+      "name": "Sprinter Health",
+      "industry": "Healthcare",
+      "remoteType": "Fully Remote",
+      "url": "https://www.sprinterhealth.com/careers",
+      "notes": "At-home preventive healthcare and lab testing service. Remote US roles in tech and operations.",
+      "dateAdded": "2026-06-17",
+      "linkedinPostUrl": "https://www.linkedin.com/posts/khushbu-jain-33abb258_30-remote-companies-hiring-remote-talent-share-7472580510360395776-gp2x/"
+    },
+    {
+      "id": "storyblok",
+      "name": "Storyblok",
+      "industry": "Technology",
+      "remoteType": "Fully Remote",
+      "url": "https://www.storyblok.com/jobs",
+      "notes": "Headless CMS for developers and marketers. Fully remote team across 30+ countries.",
+      "dateAdded": "2026-06-17",
+      "linkedinPostUrl": "https://www.linkedin.com/posts/khushbu-jain-33abb258_30-remote-companies-hiring-remote-talent-share-7472580510360395776-gp2x/"
     }
   ]
 }
